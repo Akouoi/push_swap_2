@@ -33,7 +33,7 @@ int	sort_two(t_list **lst, t_stats stats)
 	}
 	return(0);
 }
-\
+//3 2 1 sa rra > >
 int	sort_three(t_list **lst, t_stats stats)
 {
 	// printf("sort_three\n\n");
@@ -42,6 +42,15 @@ int	sort_three(t_list **lst, t_stats stats)
 		if (ft_lstsize(*lst) == stats.size)
 			ft_lstclear(lst, free);
 		return (0);
+	}
+	if ((*lst)->se > 0  && (*lst)->nx->se > 0)
+	{
+		stats.stdsum_a = move(lst, ra, stats);
+		stats.stdsum_a = move(lst, sa, stats);
+		if (ft_lstsize(*lst) == stats.size)
+			ft_lstclear(lst, free);
+		return (0);
+
 	}
 	if ((*lst)->se < 0 && (*lst)->rk > (*lst)->nx->nx->rk)
 	{

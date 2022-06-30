@@ -44,7 +44,7 @@ void	ft_lstadd_num(t_list **lst, int new)
 {
 	t_list	*tmp;
 
-	if (*lst && new)
+	if (*lst)
 	{
 		tmp = *lst;
 		tmp = (ft_lstlast(*(lst)));

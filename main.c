@@ -20,12 +20,12 @@ int	pushswap(int ac, char **av)
 //	int		i = 0;
 
 	a = ft_lstset(ac, av);
+	printf(" first %d\n", (*a)->nb);
 	if (!a)
 		return (1);
 	stats = ft_statset(a, stats);
-	// print_tab("LISTE", a, a, stats);
 	if (check_dup(a) == 1)
-		return (0);
+		return (write(2, "Error\n", 6));
 	if (ac == 3)
 		return (sort_two(a, stats));
 	if (ac == 4)
