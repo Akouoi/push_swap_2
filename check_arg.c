@@ -56,7 +56,7 @@ int	check_dup(t_list **lst)
 	cmp = *lst;
 	while (cmp)
 	{
-		tmp = cmp->next;
+		tmp = cmp->nx;
 		while (tmp)
 		{
 			if (cmp->nb == tmp->nb)
@@ -64,9 +64,9 @@ int	check_dup(t_list **lst)
 				ft_lstclear(lst, free);
 				return (1);
 			}
-			tmp = tmp->next;
+			tmp = tmp->nx;
 		}
-		cmp = cmp->next;
+		cmp = cmp->nx;
 	}
 	return (0);
 }

@@ -19,7 +19,7 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 		while (lst)
 		{
 			(*f)(lst->content);
-			lst = lst->next;
+			lst = lst->nx;
 		}
 	}
 }
@@ -27,12 +27,12 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 int	main()
 {
 	t_list	*par;
-	t_list	*next_par;
+	t_list	*nx_par;
 	par = malloc(sizeof(t_list));
-	next_par = malloc(sizeof(t_list));
+	nx_par = malloc(sizeof(t_list));
 
 	par->content = "hello world";
-	next_par->content = "coucou";
+	nx_par->content = "coucou";
 
 	ft_lstiter(par, &ft_putstr;
 }*/

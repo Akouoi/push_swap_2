@@ -27,10 +27,10 @@ t_stats	ft_statset(t_list **lst, t_stats stats)
 		while (tmp)
 		{
 			i += ((*lst)->nb > tmp->nb);
-			tmp = tmp->next;
+			tmp = tmp->nx;
 		}
-		(*lst)->rank = i;
-		*lst = (*lst)->next;
+		(*lst)->rk = i;
+		*lst = (*lst)->nx;
 		stats.size += 1;
 	}
 	stats.move = 0;
@@ -48,8 +48,8 @@ void	ft_lstadd_num(t_list **lst, int new)
 	{
 		tmp = *lst;
 		tmp = (ft_lstlast(*(lst)));
-		tmp->next = malloc(sizeof(t_list));
-		tmp->next->nb = new;
+		tmp->nx = malloc(sizeof(t_list));
+		tmp->nx->nb = new;
 	}
 	else
 	{

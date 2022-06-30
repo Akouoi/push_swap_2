@@ -146,7 +146,7 @@ int		sort_two(t_list **lst, t_stats stats);
 
 int		check_if(t_list **a, t_list **b, t_stats stats);
 
-int		find_next(t_list **a, int j);
+int		find_nx(t_list **a, int j);
 
 //---------------------------------------------------------------------------------------
 //		bubble_sort.c

@@ -26,19 +26,19 @@ void	ft_print(char *str, char *name, t_list **lst)
 	tmp = *lst;
 	while (tmp)
 	{
-		printf("\n\t%d :\t|\t%d\t|\t", tmp->pos, tmp->rank);
+		printf("\n\t%d :\t|\t%d\t|\t", tmp->pos, tmp->rk);
 		if (tmp->gap < 0)
-			printf("\033[31;01m%+d\033[00m\t|\t%+d\n", tmp->gap, tmp->serie);
+			printf("\033[31;01m%+d\033[00m\t|\t%+d\n", tmp->gap, tmp->se);
 		else if (tmp->gap > 0)
-			printf("\033[32;01m%+d\033[00m\t|\t%+d\n", tmp->gap, tmp->serie);
+			printf("\033[32;01m%+d\033[00m\t|\t%+d\n", tmp->gap, tmp->se);
 		else
-			printf("%+d \t|\t% d\n", tmp->gap, tmp->serie);
-		tmp = tmp->next;
+			printf("%+d \t|\t% d\n", tmp->gap, tmp->se);
+		tmp = tmp->nx;
 	}
 	write (1, "\n", 1);
 	tmp = *lst;
 	i = 0;
-	while (++i < 80)
+	while (++i < 60)
 		ft_putchar_fd('-', 1);
 	write (1, "\n", 1);
 }

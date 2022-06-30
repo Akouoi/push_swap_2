@@ -23,7 +23,7 @@ int	pushswap(int ac, char **av)
 	if (!a)
 		return (1);
 	stats = ft_statset(a, stats);
-	print_tab("LISTE", a, a, stats);
+	// print_tab("LISTE", a, a, stats);
 	if (check_dup(a) == 1)
 		return (0);
 	if (ac == 3)
@@ -36,11 +36,11 @@ int	pushswap(int ac, char **av)
 	// while (++i < 3 && stats.stdsum_a != 0)
 	// 	bubble_sort(a, b, stats);
 	sort_test(a, b, stats);
-	print_tab("LISTE", a, a, stats);
+	// print_tab("LISTE", a, a, stats);
 
 	ft_lstclear(a, free);
 	ft_lstclear(b, free);
-	printf("GG liste triee\n");
+	// printf("GG liste triee\n");
 	return (1);
 }
 

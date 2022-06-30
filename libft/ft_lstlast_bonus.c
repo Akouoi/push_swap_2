@@ -19,8 +19,8 @@ t_list	*ft_lstlast(t_list *lst)
 	if (!lst)
 		return (NULL);
 	tmp = lst;
-	while (tmp->next)
-		tmp = tmp->next;
+	while (tmp->nx)
+		tmp = tmp->nx;
 	return (tmp);
 }
 /*
@@ -28,18 +28,18 @@ int	main()
 {
 	t_list	*elem;
 	t_list	*par;
-	t_list	*next_par;
+	t_list	*nx_par;
 	par = malloc(sizeof(t_list));
-	next_par = malloc(sizeof(t_list));
+	nx_par = malloc(sizeof(t_list));
 
 	par->content = "hello world";
-	next_par->content = "coucou";
+	nx_par->content = "coucou";
 
-	par->next = next_par;
+	par->nx = nx_par;
 	printf("hello world address = %p\n", par->content);
-	printf("coucou address = %p\n", par->next);
+	printf("coucou address = %p\n", par->nx);
 	printf("HW = %s\n", (char *)par->content);
-	printf("CC = %s\n", (char *)next_par->content);
+	printf("CC = %s\n", (char *)nx_par->content);
 	printf("--------------------------\n");
 	elem = ft_lstlast(par);
 	printf("%s\n", (char *)elem->content);

@@ -33,22 +33,22 @@ void	push(t_list **src, t_list **dst)
 {
 	t_list	*tmp;
 
-	if (dst && !(*src)->next)
+	if (dst && !(*src)->nx)
 	{
 		ft_lstadd_front(dst, ft_lstnew((*src)->content));
 		// (*dst)->nb = (*src)->nb;
-		(*dst)->rank = (*src)->rank;
+		(*dst)->rk = (*src)->rk;
 		ft_lstdelone(*src, free);
 		*src = NULL;
 	}
-	else if ((*src)->next)
+	else if ((*src)->nx)
 	{
-			tmp = (*src)->next;
+			tmp = (*src)->nx;
 		if (dst && *src)
 			ft_lstadd_front(dst, ft_lstnew((*src)->content));
 		else
 			(*dst) = ft_lstnew((*src)->content);
-		(*dst)->rank = (*src)->rank;
+		(*dst)->rk = (*src)->rk;
 		ft_lstdelone(*src, free);
 		*src = tmp;
 	}

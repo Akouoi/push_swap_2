@@ -17,7 +17,7 @@ int	sort_two(t_list **lst, t_stats stats)
 
 	if (stats.size == 2)
 	{
-		if ((*lst)->nb > ((*lst)->next)->nb)
+		if ((*lst)->nb > ((*lst)->nx)->nb)
 		{
 			stats.stdsum_a = move(lst, sa, stats);
 			ft_lstclear(lst, free);
@@ -26,30 +26,32 @@ int	sort_two(t_list **lst, t_stats stats)
 		ft_lstclear(lst, free);
 		return (0);
 	}
-	else if ((*lst)->rank == 1 && (*lst)->next->rank == stats.size)
+	else if ((*lst)->rk == 1 && (*lst)->nx->rk == stats.size)
 	{
 		stats.stdsum_a = move(lst, sa, stats);
 		return (1);
 	}
 	return(0);
 }
-
+\
 int	sort_three(t_list **lst, t_stats stats)
 {
-	if (ft_stdsum(lst, stats) == 0)
+	// printf("sort_three\n\n");
+	if ((*lst)->se < 0  && (*lst)->nx->se < 0)
 	{
-		ft_lstclear(lst, free);
+		if (ft_lstsize(*lst) == stats.size)
+			ft_lstclear(lst, free);
 		return (0);
 	}
-	if (ft_stdsum(lst, stats) == 4 && (*lst)->rank == 3)
-		ft_rotate(lst, ra);
-	if (ft_stdsum(lst, stats) == 2)
-		ft_swap(lst, sa);
-	if ((*lst)->rank == 2 && ((*lst)->next)->nb == 3)
+	if ((*lst)->se < 0 && (*lst)->rk > (*lst)->nx->nx->rk)
 	{
-		ft_rrotate(lst, rra);
+		stats.stdsum_a = move(lst, rra, stats);
 		return (0);
 	}
+	else if ((*lst)->se > 0  && (*lst)->nx->se < 0 && (*lst)->rk > (*lst)->nx->nx->rk)
+		stats.stdsum_a = move(lst, ra, stats);
+	else
+		stats.stdsum_a = move(lst, sa, stats);
 	sort_three(lst, stats);
 	return (1);
 }

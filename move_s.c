@@ -29,14 +29,14 @@ void	ft_swap(t_list **lst, int i)
 	tmp = malloc(sizeof(t_list *));
 	if (!tmp)
 		return ;
-	if (*lst && (*lst)->next)
+	if (*lst && (*lst)->nx)
 	{
 		tmp->content = (*lst)->content;
-		(*lst)->content = (*lst)->next->content;
-		(*lst)->next->content = tmp->content;
+		(*lst)->content = (*lst)->nx->content;
+		(*lst)->nx->content = tmp->content;
 	}
-	ft_swap_int(&((*lst)->nb), (&((*lst)->next)->nb));
-	ft_swap_int(&((*lst)->rank), (&((*lst)->next)->rank));
+	ft_swap_int(&((*lst)->nb), (&((*lst)->nx)->nb));
+	ft_swap_int(&((*lst)->rk), (&((*lst)->nx)->rk));
 	if (i == sa)
 		printf("sa\n");
 	if (i == sb)

@@ -21,7 +21,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 	{
 		while (tmp)
 		{
-			tmp = (*lst)->next;
+			tmp = (*lst)->nx;
 			del((*lst)->content);
 			free(*lst);
 			*lst = tmp;

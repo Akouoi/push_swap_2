@@ -21,7 +21,7 @@ t_list	*ft_lstmid(t_list **lst)
 	tmp = *lst;
 	while (--i)
 	{
-		tmp = tmp->next;
+		tmp = tmp->nx;
 	}
 	return (tmp);
 }
@@ -36,7 +36,7 @@ int	ft_pos_shift(t_list **lst)
 	while (tmp)
 	{
 		tmp->pos = ++j;
-		tmp = tmp->next;
+		tmp = tmp->nx;
 	}
 	return (j);
 }
@@ -54,12 +54,12 @@ int	ft_stdsum(t_list **lst, t_stats stats)
 	while (tmp)
 	{
 		tmp->pos = ++j;
-		tmp->gap = (tmp->rank - tmp->pos);
+		tmp->gap = (tmp->rk - tmp->pos);
 		if (tmp->gap < 0)
 			i -= tmp->gap;
 		else
 			i += tmp->gap;
-		tmp = tmp->next;
+		tmp = tmp->nx;
 	}
 	stats.serie = ft_serie(lst);
 	return (i);
@@ -74,9 +74,9 @@ int	serie_calc(t_list **a)
 	i = 0;
 	while (tmp)
 	{
-		if (tmp->next && tmp->serie == -1)
+		if (tmp->nx && tmp->se == -1)
 			i++;
-		tmp = tmp->next;
+		tmp = tmp->nx;
 	}
 	return (i);
 }
@@ -86,16 +86,16 @@ int	ft_serie(t_list **lst)
 	t_list	*tmp;
 
 	tmp = *lst;
-	while (tmp && tmp->next)
+	while (tmp && tmp->nx)
 	{
-		// if (tmp->next)
+		// if (tmp->nx)
 		// {
-			tmp->serie = tmp->rank - (tmp->next)->rank;
-			// ft_printf("tmp->serie = %+d\n", tmp->serie);
+			tmp->se = tmp->rk - (tmp->nx)->rk;
+			// ft_printf("tmp->se = %+d\n", tmp->se);
 		// }
-		tmp = tmp->next;
+		tmp = tmp->nx;
 	}
-	tmp->serie = tmp->rank - (*lst)->rank;
+	tmp->se = tmp->rk - (*lst)->rk;
 	return (serie_calc(lst));
 }
 	// printf("\tserie_calc = %d\t", serie_calc(lst));

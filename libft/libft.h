@@ -27,11 +27,11 @@ typedef struct s_list
 {
 	char			*content;
 	int 			nb;
-	int				rank;
+	int				rk;
 	int				pos;
 	int				gap;
-	int				serie;
-	struct s_list	*next;
+	int				se;
+	struct s_list	*nx;
 }	t_list;
 
 //---------------------------------------------------------------------------------------

@@ -15,16 +15,16 @@
 void	ft_rotate(t_list **lst, int i)
 {
 	t_list	*tmp;
-	int		rank;
+	int		rk;
 
 	if (!(*lst))
 		return ;
 	tmp = *lst;
-	rank = (*lst)->rank;
+	rk = (*lst)->rk;
 	ft_lstadd_back(lst, ft_lstnew((*lst)->content));
-	(*lst) = tmp->next;
+	(*lst) = tmp->nx;
 	ft_lstdelone(tmp, free);
-	(ft_lstlast(*lst))->rank = rank;
+	(ft_lstlast(*lst))->rk = rk;
 	if (i == ra)
 		printf("ra\n");
 	if (i == rb)
@@ -34,18 +34,18 @@ void	ft_rotate(t_list **lst, int i)
 void	ft_rrotate(t_list **lst, int i)
 {
 	t_list	*tmp;
-	int		rank;
+	int		rk;
 
 	if (!(*lst))
 		return ;
 	tmp = *lst;
-	while ((tmp->next)->next)
-		tmp = tmp->next;
-	rank = ((tmp->next)->rank);
-	ft_lstadd_front(lst, ft_lstnew((tmp->next)->content));
-	ft_lstdelone(tmp->next, free);
-	tmp->next = NULL;
-	(*lst)->rank = rank;
+	while ((tmp->nx)->nx)
+		tmp = tmp->nx;
+	rk = ((tmp->nx)->rk);
+	ft_lstadd_front(lst, ft_lstnew((tmp->nx)->content));
+	ft_lstdelone(tmp->nx, free);
+	tmp->nx = NULL;
+	(*lst)->rk = rk;
 	if (i == rra)
 		printf("rra\n");
 	if (i == rrb)
