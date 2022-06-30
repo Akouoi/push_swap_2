@@ -1,5 +1,33 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   sort_test.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: akouoi <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/06/30 12:38:22 by akouoi            #+#    #+#             */
+/*   Updated: 2022/06/30 12:38:32 by akouoi           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
+int	sort_swap(t_list **a, t_list **b, t_stats stats)
+{
+	if(stats.stdsum_a == 0)
+		return (0);
+	if ((*a)->rank == (*b)->rank + 1)
+		stats.stdsum_a = move_double(a, b, pa, stats);
+	if (((*a)->rank - (*a)->next->rank > 0 && (*a)->rank - (*a)->next->rank < stats.mid)
+			&& ((*b)->rank - (*b)->next->rank < 0 && (*b)->rank - (*b)->next->rank > -stats.mid))
+		stats.stdsum_a = move_double(a, b, ss, stats);
+	else if ((*a)->rank - (*a)->next->rank > 0 && (*a)->rank - (*a)->next->rank < stats.mid)
+		stats.stdsum_a = move(a, sa, stats);
+	else if ((*b)->rank - (*b)->next->rank < 0 && (*b)->rank - (*b)->next->rank > -stats.mid)
+		stats.stdsum_a = move(a, sa, stats);
+	sort_swap(a, b, stats);
+	return(1);
+}
 int sort_test(t_list **a, t_list **b, t_stats stats)
 {
 	stats.serie = ft_serie(a);
@@ -11,13 +39,7 @@ int sort_test(t_list **a, t_list **b, t_stats stats)
 		else
 			stats.stdsum_a = move(a, ra, stats);
 	}
-	if (((*a)->rank - (*a)->next->rank > 0 && (*a)->rank - (*a)->next->rank < stats.mid)
-			&& ((*b)->rank - (*b)->next->rank < 0 && (*b)->rank - (*b)->next->rank > -stats.mid))
-		stats.stdsum_a = move_double(a, b, ss, stats);
-	else if ((*a)->rank - (*a)->next->rank > 0 && (*a)->rank - (*a)->next->rank < stats.mid)
-		stats.stdsum_a = move(a, sa, stats);
-	else if ((*b)->rank - (*b)->next->rank < 0 && (*b)->rank - (*b)->next->rank > -stats.mid)
-		stats.stdsum_a = move(a, sa, stats);
+	sort_swap(a, b, stats);
 	print_tab("LISTE", a, b, stats);
 
 	// sort_test(a, b, stats);
