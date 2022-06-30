@@ -6,7 +6,7 @@
 /*   By: akouoi <akouoi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/17 11:28:03 by akouoi            #+#    #+#             */
-/*   Updated: 2022/06/26 12:11:32 by akouoi           ###   ########.fr       */
+/*   Updated: 2022/06/30 14:23:48 by akouoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,14 +19,14 @@ void	ft_print(char *str, char *name, t_list **lst)
 
 	i = 0;
 	printf("\033[37;01m%s %s\033[00m\n", str, name);
-	printf("\n\tpos\t|\tnb\t|\trank\t|\tgap\t|\tserie\n");
+	printf("\n\tpos\t|\trank\t|\tgap\t|\tserie\n");
 	while (++i < 80)
 		ft_putchar_fd('-', 1);
 	write (1, "\n", 1);
 	tmp = *lst;
 	while (tmp)
 	{
-		printf("\n\t%d :\t|\t%d\t|\t%d\t|\t", tmp->pos, tmp->nb, tmp->rank);
+		printf("\n\t%d :\t|\t%d\t|\t", tmp->pos, tmp->rank);
 		if (tmp->gap < 0)
 			printf("\033[31;01m%+d\033[00m\t|\t%+d\n", tmp->gap, tmp->serie);
 		else if (tmp->gap > 0)

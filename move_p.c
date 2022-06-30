@@ -6,7 +6,7 @@
 /*   By: akouoi <akouoi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/17 11:21:41 by akouoi            #+#    #+#             */
-/*   Updated: 2022/06/22 19:06:30 by akouoi           ###   ########.fr       */
+/*   Updated: 2022/06/30 12:58:35 by akouoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,7 @@ void	push(t_list **src, t_list **dst)
 	if (dst && !(*src)->next)
 	{
 		ft_lstadd_front(dst, ft_lstnew((*src)->content));
+		// (*dst)->nb = (*src)->nb;
 		(*dst)->rank = (*src)->rank;
 		ft_lstdelone(*src, free);
 		*src = NULL;

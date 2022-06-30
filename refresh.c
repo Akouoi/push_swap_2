@@ -6,7 +6,7 @@
 /*   By: akouoi <akouoi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/17 11:25:42 by akouoi            #+#    #+#             */
-/*   Updated: 2022/06/22 19:09:00 by akouoi           ###   ########.fr       */
+/*   Updated: 2022/06/30 14:17:06 by akouoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,8 +88,11 @@ int	ft_serie(t_list **lst)
 	tmp = *lst;
 	while (tmp && tmp->next)
 	{
-		if (tmp->next)
-			tmp->serie = tmp->rank -(tmp->next)->rank;
+		// if (tmp->next)
+		// {
+			tmp->serie = tmp->rank - (tmp->next)->rank;
+			// ft_printf("tmp->serie = %+d\n", tmp->serie);
+		// }
 		tmp = tmp->next;
 	}
 	tmp->serie = tmp->rank - (*lst)->rank;

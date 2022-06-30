@@ -6,7 +6,7 @@
 /*   By: akouoi <akouoi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/17 11:17:37 by akouoi            #+#    #+#             */
-/*   Updated: 2022/06/24 15:17:22 by akouoi           ###   ########.fr       */
+/*   Updated: 2022/06/30 12:49:32 by akouoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,6 @@ int	check_dup(t_list **lst)
 			tmp = tmp->next;
 		}
 		cmp = cmp->next;
-		printf("coucou\n");
 	}
 	return (0);
 }

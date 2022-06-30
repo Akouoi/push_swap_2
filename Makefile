@@ -22,29 +22,29 @@ SRC = main.c \
 
 OBJ= $(SRC:.c=.o)
 
-all: $(NAME)
+all: $(NAME) clean
 $(NAME): $(OBJ)
 	$(CC) $(OBJ) -L libft/. -lft -g -o $(NAME)
 	@echo $(cora)     ____     ____ 	$(c)
-	@echo $(cora)    '000\ \ / /000' 		$(c)
+	@echo $(cora)    '===\ \ / /===' 		$(c)
 	@echo $(cora)    ,\\\\\ | /////, 		$(c)
 	@echo $(cora) __  \ .--. .--. /  __	    $(c)
 	@echo $(cora)___\/ '    |    ' \/___	$(c)
 	@echo $(cora)-- _, !    |    ! ,_ --	$(c)
 	@echo $(cora)   / '!    |    !' \ 	    $(c)
 	@echo $(cora)  /'/ !    |    ! \'\  	$(c)
-	@echo $(cora) 10 ! \   0|0   / ! 01 	$(c)
-	@echo $(cora) !0 \   --; ;--   / 0!		$(c)
+	@echo $(cora) 1= ! \   0|0   / ! =1 	$(c)
+	@echo $(cora) != \   --; ;--   / =!		$(c)
 	@echo $(cora)     \    ,-,    /     	$(c)
 	@echo $(cora)  \ 0  --~   ~--  0 / 	    $(c)
 	@echo $(cora)   \ -___________- /		$(c)
 	@echo $(cora)       MAKE DONE$(c)
 
 %.o : %.c
-	$(MAKE) all -C libft
+	$(MAKE) -s all -C libft
 	$(CC) $(CFLAG) -c $^
 clean:
-	$(MAKE) fclean -C libft
+	$(MAKE) -s fclean -C libft
 	rm -f $(OBJ)
 	@echo $(cblu)MAKE CLEAN$(c)
 

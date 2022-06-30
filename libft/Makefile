@@ -70,3 +70,5 @@ fclean: clean
 re: fclean all
 
 .PHONY: all build bonus clean fclean re
+
+.SILENT:
