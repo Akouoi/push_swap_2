@@ -20,7 +20,7 @@ int	pushswap(int ac, char **av)
 //	int		i = 0;
 
 	a = ft_lstset(ac, av);
-	printf(" first %d\n", (*a)->nb);
+	// printf(" first %d\n", (*a)->nb);
 	if (!a)
 		return (1);
 	stats = ft_statset(a, stats);
