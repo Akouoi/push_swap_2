@@ -16,7 +16,7 @@
 # include <stdio.h>
 # include "libft/libft.h"
 # include "libft/ft_printf.h"
-# include <stddef.h>
+
 //---------------------------------------------------------------------------------------
 
 enum e_move

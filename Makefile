@@ -17,7 +17,9 @@ SRC = main.c \
 	sort_bubble.c \
 	sort_quick.c \
 	sort_two_three.c \
+	sort_test.c \
 	math.c
+
 OBJ= $(SRC:.c=.o)
 
 all: $(NAME)
@@ -39,9 +41,10 @@ $(NAME): $(OBJ)
 	@echo $(cora)       MAKE DONE$(c)
 
 %.o : %.c
-	$(MAKE) bonus -C libft
+	$(MAKE) all -C libft
 	$(CC) $(CFLAG) -c $^
 clean:
+	$(MAKE) fclean -C libft
 	rm -f $(OBJ)
 	@echo $(cblu)MAKE CLEAN$(c)
 

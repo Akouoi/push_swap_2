@@ -67,6 +67,7 @@ int	check_dup(t_list **lst)
 			tmp = tmp->next;
 		}
 		cmp = cmp->next;
+		printf("coucou\n");
 	}
 	return (0);
 }

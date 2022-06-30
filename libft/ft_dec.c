@@ -38,7 +38,7 @@ char	*pf_itoa(int n, char *base)
 	return (str);
 }
 
-int	ft_putnbr_dec(va_list ap, int i)
+int	pf_putnbr_dec(va_list ap, int i)
 {
 	char	*str;
 	int		n_len;
@@ -61,7 +61,7 @@ int	ft_putnbr_dec(va_list ap, int i)
 	return (n_len);
 }
 
-int	ft_utoa(va_list ap, int i)
+int	pf_utoa(va_list ap, int i)
 {
 	unsigned int	n;
 	char			*str;
