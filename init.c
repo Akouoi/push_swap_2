@@ -6,16 +6,17 @@
 /*   By: akouoi <akouoi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/17 11:19:07 by akouoi            #+#    #+#             */
-/*   Updated: 2022/06/30 12:40:41 by akouoi           ###   ########.fr       */
+/*   Updated: 2022/07/01 11:24:33 by akouoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-t_stats	ft_statset(t_list **lst, t_stats stats)
+t_stats	ft_statset(t_list **lst)
 {
 	t_list	*tmp;
 	t_list	*start;
+	t_stats	stats;
 	int		i;
 
 	stats.size = 0;

@@ -6,7 +6,7 @@
 /*   By: akouoi <akouoi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/17 11:22:40 by akouoi            #+#    #+#             */
-/*   Updated: 2022/06/30 10:17:44 by akouoi           ###   ########.fr       */
+/*   Updated: 2022/07/01 11:23:58 by akouoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,7 @@ int		check_dup(t_list **lst);
 
 t_list	**ft_lstset(int ac, char **av);
 
-t_stats	ft_statset(t_list **lst, t_stats stats);
+t_stats	ft_statset(t_list **lst);
 
 //---------------------------------------------------------------------------------------
 //		moves.c

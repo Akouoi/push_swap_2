@@ -6,7 +6,7 @@
 /*   By: akouoi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 12:38:22 by akouoi            #+#    #+#             */
-/*   Updated: 2022/06/30 12:38:32 by akouoi           ###   ########.fr       */
+/*   Updated: 2022/07/01 11:13:33 by akouoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ int sort_test(t_list **a, t_list **b, t_stats stats)
 	// (void)b;
 	stats.serie = ft_serie(a);
 	// printf("int %d\t%.1f\n", (int)stats.mid, stats.mid);
-	while (ft_lstsize(*a) != stats.size - (int)stats.mid && stats.stdsum_a != 0)
+	while (ft_lstsize(*a) != 3 - (int)stats.mid && stats.stdsum_a != 0)
 	{
 		if ((*a)->rk <= stats.mid)
 			stats.stdsum_a = move_double(a, b, pb, stats);

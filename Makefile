@@ -3,7 +3,7 @@ cg="\033[0;32m
 cb="\033[0;36m
 cO="\033[1;33m
 c=\033[0m"
-CC = gcc
+CC =gcc
 CFLAG = -Wall -Werror -Wextra
 SRC = main.c \
 	check_arg.c \
@@ -24,6 +24,7 @@ OBJ= $(SRC:.c=.o)
 
 all: $(NAME) clean
 $(NAME): $(OBJ)
+	$(CC) $(OBJ) -L libft/. -lft -g -o $(NAME)
 	@echo $(cO)           __ __			$(c)
 	@echo $(cO)         ,;::\::\		$(c)
 	@echo $(cO)       ,^ / ^ /^/		$(c)

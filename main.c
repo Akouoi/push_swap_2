@@ -6,7 +6,7 @@
 /*   By: akouoi <akouoi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/17 11:27:29 by akouoi            #+#    #+#             */
-/*   Updated: 2022/06/30 12:52:09 by akouoi           ###   ########.fr       */
+/*   Updated: 2022/07/01 11:22:53 by akouoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	pushswap(int ac, char **av)
 	// printf(" first %d\n", (*a)->nb);
 	if (!a)
 		return (1);
-	stats = ft_statset(a, stats);
+	stats = ft_statset(a);
 	if (check_dup(a) == 1)
 		return (write(2, "Error\n", 6));
 	if (ac == 3)
