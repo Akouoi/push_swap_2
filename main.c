@@ -6,7 +6,7 @@
 /*   By: akouoi <akouoi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/17 11:27:29 by akouoi            #+#    #+#             */
-/*   Updated: 2022/07/01 11:22:53 by akouoi           ###   ########.fr       */
+/*   Updated: 2022/07/01 14:30:58 by akouoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,8 +36,8 @@ int	pushswap(int ac, char **av)
 	// while (++i < 3 && stats.stdsum_a != 0)
 	// 	bubble_sort(a, b, stats);
 	sort_test(a, b, stats);
-	// print_tab("LISTE", a, a, stats);
 
+	print_tab("LISTE", a, b, stats);
 	ft_lstclear(a, free);
 	ft_lstclear(b, free);
 	// printf("GG liste triee\n");

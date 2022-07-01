@@ -6,7 +6,7 @@
 /*   By: akouoi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 12:38:22 by akouoi            #+#    #+#             */
-/*   Updated: 2022/07/01 11:54:43 by akouoi           ###   ########.fr       */
+/*   Updated: 2022/07/01 14:29:52 by akouoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,10 @@ int	sort_swap(t_list **a, t_list **b, t_stats stats)
 	else if (*b && (*b)->rk - (*b)->nx->rk < 0 && (*b)->rk - (*b)->nx->rk > -stats.mid)
 		stats.stdsum_a = move(b, sb, stats);
 	// print_tab("LISTE", a, b, stats);	
-	sort_swap(a, b, stats);
+	//sort_swap(a, b, stats);
 	return(1);
 }
+
 int sort_test(t_list **a, t_list **b, t_stats stats)
 {
 	// (void)b;
@@ -45,11 +46,11 @@ int sort_test(t_list **a, t_list **b, t_stats stats)
 		if (stats.stdsum_a == 0)
 			break ;
 	}
+	//print_tab("LISTE", a, b, stats);
 	if (ft_lstsize(*a) == 3)
 		sort_three(a, stats);
 	if (*a && *b)
 		sort_swap(a, b, stats);
-	// print_tab("LISTE", a, b, stats);
-	// sort_test(a, b, stats);
+	//bubble_sort(a, b, stats);
 	return(1);
 }
