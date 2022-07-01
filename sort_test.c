@@ -6,7 +6,7 @@
 /*   By: akouoi <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 12:38:22 by akouoi            #+#    #+#             */
-/*   Updated: 2022/07/01 11:13:33 by akouoi           ###   ########.fr       */
+/*   Updated: 2022/07/01 11:54:43 by akouoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,7 @@ int	sort_swap(t_list **a, t_list **b, t_stats stats)
 		stats.stdsum_a = move(a, sa, stats);
 	else if (*b && (*b)->rk - (*b)->nx->rk < 0 && (*b)->rk - (*b)->nx->rk > -stats.mid)
 		stats.stdsum_a = move(b, sb, stats);
-	// print_tab("LISTE", a, b, stats);
-	
+	// print_tab("LISTE", a, b, stats);	
 	sort_swap(a, b, stats);
 	return(1);
 }
@@ -35,19 +34,21 @@ int sort_test(t_list **a, t_list **b, t_stats stats)
 	// (void)b;
 	stats.serie = ft_serie(a);
 	// printf("int %d\t%.1f\n", (int)stats.mid, stats.mid);
-	while (ft_lstsize(*a) != 3 - (int)stats.mid && stats.stdsum_a != 0)
+	if (stats.stdsum_a == 0)
+		return (0);
+	while (ft_lstsize(*a) != 3)
 	{
-		if ((*a)->rk <= stats.mid)
+		if ((*a)->rk <= stats.size - 3)
 			stats.stdsum_a = move_double(a, b, pb, stats);
 		else
 			stats.stdsum_a = move(a, rra, stats);
-		// print_tab("LISTE", a, b, stats);
+		if (stats.stdsum_a == 0)
+			break ;
 	}
 	if (ft_lstsize(*a) == 3)
 		sort_three(a, stats);
 	if (*a && *b)
 		sort_swap(a, b, stats);
-
 	// print_tab("LISTE", a, b, stats);
 	// sort_test(a, b, stats);
 	return(1);
