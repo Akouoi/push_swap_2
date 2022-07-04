@@ -13,12 +13,12 @@ SRC = main.c \
 	move_p.c \
 	move_s.c \
 	print.c \
-	refresh.c \
 	sort_bubble.c \
 	sort_quick.c \
 	sort_two_three.c \
 	sort_test.c \
-	math.c
+	math.c \
+	math_2.c
 
 OBJ= $(SRC:.c=.o)
 

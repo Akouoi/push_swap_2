@@ -6,131 +6,109 @@
 /*   By: akouoi <akouoi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/22 19:09:28 by akouoi            #+#    #+#             */
-/*   Updated: 2022/06/26 13:37:09 by akouoi           ###   ########.fr       */
+/*   Updated: 2022/07/04 12:41:37 by akouoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	find_nx(t_list **a, int j)
-{
-	int	i;
-	t_list	*tmp;
-	i = 0;
-
-	tmp = *a;
-	while (tmp)
-	{
-		if (tmp->rk != j + 1)
-		{
-			i++;
-			tmp = tmp->nx;
-		}
-		else
-			break ;
-	}
-	if (i !=j)
-		return (i);
-	return (0);
-}
 //printf("\nrk_match %d", i);
-
-int	bubble_sort(t_list **a, t_list **b, t_stats stats)
-{
-	int	i;
-	(void)b;
-	// if (stats.stdsum_a == 0)
-		//print_tab("LISTE", a, b, stats);
+// int	bubble_sort(t_list *a, t_list *b, t_stats stats)
+// {
+// 	int	i;
+// 	(void)b;
+// 	// if (stats.stdsum_a == 0)
+// 		//print_tab("LISTE", a, b, stats);
 	
-	if (stats.stdsum_a == 0 && ft_lstsize(*a) == stats.size)
-		return (1);
-	stats.serie = ft_serie(a);
-	printf("==========stats.serie=%d\n", stats.serie);
-	printf("\tstd = %d\t %d = %.0f\n", stats.stdsum_a, ft_lstsize(*a), stats.size);
+// 	if (stats.stdsum_a == 0 && ft_lstsize(a) == stats.size)
+// 		return (1);
+// 	stats.serie = ft_serie(&a);
+// 	printf("==========stats.serie=%d\n", stats.serie);
+// 	printf("\tstd = %d\t %d = %.0f\n", stats.stdsum_a, ft_lstsize(a), stats.size);
 	
-	// if(*b && (*b)->rk - (*a)->rk <= -1)
-	// {
-	// 	stats.move += 1;
-	// 	printf("\t%d\t", stats.move);
-	// 	stats.stdsum_a = move_double(a, b, pa, stats);
-	// }
-	printf("nx = %d\n",find_nx(a, (*a)->rk));
- 	if ((*a)->se <= stats.mid)
- 	{
- 		stats.move += 1;
- 		printf("\t%d\t", stats.move);
- 		stats.stdsum_a = move(a, sa, stats);
- 	}
-	// if((*a)->se >= stats.mid || abs((*a)->gap) > stats.mid)
-	// {
-	// 	stats.move += 1;
-	// 	//printf("\t%d\t", stats.move);
-	// 	stats.stdsum_a = move_double(a, b, pb, stats);
-	// }
-	else if (find_nx(a, (*a)->rk) < stats.mid)
-	{
-		i = 0;
-		while (i < stats.serie)
-		{
-			stats.move += 1;
-			printf("\t%d\t", stats.move);
-			stats.stdsum_a = move(a, ra, stats);
-			i++;
-		}
-	}
-	else
-	{
-		i = 0;
-		while (i <= stats.serie - stats.mid)
-		{
-			stats.move += 1;
-			printf("\t%d\t", stats.move);
-			stats.stdsum_a = move(a, rra, stats);
-			i++;
-		}
-	}
-	print_tab("LISTE", a, b, stats);
-	// bubble_sort(a, b, stats);
-	return (0);
-}
+// 	// if(*b && b->rk - a->rk <= -1)
+// 	// {
+// 	// 	stats.move += 1;
+// 	// 	printf("\t%d\t", stats.move);
+// 	// 	stats.stdsum_a = move_double(a, b, pa, stats);
+// 	// }
+// 	printf("nx = %d\n",find_nx(a, a->rk));
+//  	if (a->se <= stats.mid)
+//  	{
+//  		stats.move += 1;
+//  		printf("\t%d\t", stats.move);
+//  		stats.stdsum_a = move(a, sa, stats);
+//  	}
+// 	// if(a->se >= stats.mid || abs(a->gap) > stats.mid)
+// 	// {
+// 	// 	stats.move += 1;
+// 	// 	//printf("\t%d\t", stats.move);
+// 	// 	stats.stdsum_a = move_double(a, b, pb, stats);
+// 	// }
+// 	else if (find_nx(a, a->rk) < stats.mid)
+// 	{
+// 		i = 0;
+// 		while (i < stats.serie)
+// 		{
+// 			stats.move += 1;
+// 			printf("\t%d\t", stats.move);
+// 			stats.stdsum_a = move(a, ra, stats);
+// 			i++;
+// 		}
+// 	}
+// 	else
+// 	{
+// 		i = 0;
+// 		while (i <= stats.serie - stats.mid)
+// 		{
+// 			stats.move += 1;
+// 			printf("\t%d\t", stats.move);
+// 			stats.stdsum_a = move(a, rra, stats);
+// 			i++;
+// 		}
+// 	}
+// 	// print_tab("LISTE", a, b, stats);
+// 	// bubble_sort(a, b, stats);
+// 	return (0);
+// }
 
 // int	bubble_sort(t_list **a, t_list **b, t_stats stats)
 // {
 // 	// int	nx;
 
 // 	(void)b;
-// 	if (ft_stdsum(a, stats) == 0 && ft_lstsize(*a) == stats.size)
+// 	if (ft_stdsum(a, stats) == 0 && ft_lstsizea == stats.size)
 // 		return (1);
 // 	// //printf("\tstdsum :%d\t|\tmid/size %.1f/%d\t", 
 	// stats.stdsum_a, stats.mid, stats.size);
-// 	// //printf("\trk %d\t", (*a)->rk);
-// 	// nx = find_nx(a, (*a)->rk);
-// 	if (abs((*a)->se) >= stats.mid)
+// 	// //printf("\trk %d\t", a->rk);
+// 	// nx = find_nx(a, a->rk);
+// 	if (abs(a->se) >= stats.mid)
 // 	{
 // 		stats.move += 1;
 // 		//printf("\t%d\t", stats.move);
 // 		stats.stdsum_a = move_double(a, b, pb, stats);
 // 	}
-// 	if(*b && (*b)->rk == (*a)->rk - 1)
+// 	if(*b && b->rk == a->rk - 1)
 // 	{
 // 		stats.move += 1;
 // 		//printf("\t%d\t", stats.move);
 // 		stats.stdsum_a = move_double(a, b, pa, stats);
 // 	}
-// 	if ((*a)->se > 0 && (*a)->se < stats.mid 
-// 		&& (*b && (*b)->nx && (*b)->rk - (*b)->nx->rk == -1))
+// 	if (a->se > 0 && a->se < stats.mid 
+// 		&& (*b && b->nx && b->rk - b->nx->rk == -1))
 // 	{
 // 		stats.move += 1;
 // 		//printf("\t%d\t", stats.move);
 // 		stats.stdsum_a = move_double(a, b, ss, stats);
 // 	}
-// 	else if ((*a)->se > 0 && (*a)->se <= stats.mid)
+// 	else if (a->se > 0 && a->se <= stats.mid)
 // 	{
 // 		stats.move += 1;
 // 		//printf("\t%d\t", stats.move);
 // 		stats.stdsum_a = move(a, sa, stats);
 // 	}
-// 	else if(*b && (*b)->nx && (*b)->rk - (*b)->nx->rk == -1) // OK
+// 	else if(*b && b->nx && b->rk - b->nx->rk == -1) // OK
 // 	{
 // 		stats.move += 1;
 // 		//printf("\t%d\t", stats.move);
@@ -160,8 +138,8 @@ int	bubble_sort(t_list **a, t_list **b, t_stats stats)
 // 	t_list	*mid;
 
 // 	(void)b;
-// 	last_a = ft_lstlast(*a);
-// 	last_b = ft_lstlast(*b);
+// 	last_a = ft_lstlasta;
+// 	last_b = ft_lstlastb;
 // 	mid = ft_lstmid(a);
 
 // 	// if (mid->rk >= stats.mid)
@@ -169,23 +147,23 @@ int	bubble_sort(t_list **a, t_list **b, t_stats stats)
 // 	// else 
 // 		stats.stdsum_a = move(a, ra, stats);
 
-// 	// if ((*a)->se != -1)
+// 	// if (a->se != -1)
 // 	// {
 // 	// 	if (mid
 // 	// }
-// 	//printf("first %d, last %d \n",(*a)->rk , last_a->rk);
-// 	//printf("first %d, last %d \n",(*b)->rk , last_b->rk);
+// 	//printf("first %d, last %d \n",a->rk , last_a->rk);
+// 	//printf("first %d, last %d \n",b->rk , last_b->rk);
 
-// 	if ((*a)->rk == last_a->rk - 1)
-// 	if ((*a)->rk == last_a->rk + 1)
+// 	if (a->rk == last_a->rk - 1)
+// 	if (a->rk == last_a->rk + 1)
 // 		stats.stdsum_a = move(a, ra, stats);
-// 	if(*b && (*b)->nx && (*b)->rk - (*b)->nx->rk == -1) // OK
+// 	if(*b && b->nx && b->rk - b->nx->rk == -1) // OK
 // 		stats.stdsum_a = move(b, sb, stats);
-// 	if ((*a)->rk = last_a->rk + 1)
+// 	if (a->rk = last_a->rk + 1)
 // 		stats.stdsum_a = move(a, rra, stats);
-// 	last_a = ft_lstlast(*a);
-// 	//printf("first %d, last %d \n",(*a)->rk , last_a->rk);
-// 	//printf("first %d, last %d \n",(*a)->rk , last_a->rk);
+// 	last_a = ft_lstlasta;
+// 	//printf("first %d, last %d \n",a->rk , last_a->rk);
+// 	//printf("first %d, last %d \n",a->rk , last_a->rk);
 
 // 	return (0);
 // }
@@ -196,9 +174,9 @@ int	bubble_sort(t_list **a, t_list **b, t_stats stats)
 // 	i = 1;
 	// if (ft_stdsum(a, stats) == 0)
 	// 	return (1);
-// 	while ((*a)->rk != i)// && i < stats.size)
+// 	while (a->rk != i)// && i < stats.size)
 // 		stats.stdsum_a = move(a, ra, stats);
-// 	while ((*a)->rk == i && i < stats.size)
+// 	while (a->rk == i && i < stats.size)
 // 	{
 // 		stats.stdsum_a = move(a, ra, stats);
 // 		i++;
@@ -207,7 +185,7 @@ int	bubble_sort(t_list **a, t_list **b, t_stats stats)
 // 	sort_push(a, b, stats);
 // 	// if (sort_push(a, b, stats) == -1 && sort_swap(a, b, stats) == -1)
 // 	// ft_//print("a_sort", a, stats);
-// 	// if(*b)
+// 	// ifb
 // 	// 	ft_//print("b", b, stats);
 // 	// sort(a, b, stats);
 // 	return (0);
@@ -215,18 +193,18 @@ int	bubble_sort(t_list **a, t_list **b, t_stats stats)
 
 // int	sort_swap(t_list **a, t_list **b, t_stats stats)
 // {
-// 	//printf("%d %d %.2f\n", (*a)->se, (*b)->se, stats.mid);
-// 	if((*a)->se > 0 && (*a)->se < stats.mid && *b && (*b)->nx && (*b)->se < 0 && (*b)->se >= -stats.mid) // OK
+// 	//printf("%d %d %.2f\n", a->se, b->se, stats.mid);
+// 	if(a->se > 0 && a->se < stats.mid && *b && b->nx && b->se < 0 && b->se >= -stats.mid) // OK
 // 	{
 // 		move_ss(a, b, stats);
 // 		return(ss);
 // 	}
-// 	else if((*a)->se > 0 && (*a)->se < stats.mid)
+// 	else if(a->se > 0 && a->se < stats.mid)
 // 	{
 // 		stats.stdsum_a = move(a, sa, stats);
 // 		return (sa);
 // 	}
-// 	else if(*b && (*b)->nx &&(*b)->se < 0 && (*b)->se > -stats.mid)
+// 	else if(*b && b->nx &&b->se < 0 && b->se > -stats.mid)
 // 	{
 // 		stats.stdsum_a = move(b, sb, stats);
 // 		return (sb);
@@ -237,7 +215,7 @@ int	bubble_sort(t_list **a, t_list **b, t_stats stats)
 // int	sort_push(t_list **a, t_list **b, t_stats stats)
 // {
 
-// 	if(*b && (*b)->rk == (*a)->rk - 1)
+// 	if(*b && b->rk == a->rk - 1)
 // 	{
 // 		stats.stdsum_a = move_double(a, b, pa, stats);
 // 		return (pa);
@@ -252,23 +230,23 @@ int	bubble_sort(t_list **a, t_list **b, t_stats stats)
 // 	t_list	*mid;
 // 	int i;
 // 	// (void)b;
-// 	// last_a = ft_lstlast(*a);
-// 	// last_b = ft_lstlast(*b);
+// 	// last_a = ft_lstlasta;
+// 	// last_b = ft_lstlastb;
 // 	mid = ft_lstmid(a);
 // 	i = find_nx(a, b);
-// 	if(*b && (*b)->rk == (*a)->rk - 1)
+// 	if(*b && b->rk == a->rk - 1)
 // 		return (pa);
-// 	else if((*a)->se > 0 && (*a)->se <= stats.mid && (*b)->se < 0
-		// && (*b)->se >= -stats.mid)//(*a)->se < stats.mid && *b && (*b)->nx
-			// && (*b)->se < 0 && (*b)->se >= -stats.mid) // OK
+// 	else if(a->se > 0 && a->se <= stats.mid && b->se < 0
+		// && b->se >= -stats.mid)//a->se < stats.mid && *b && b->nx
+			// && b->se < 0 && b->se >= -stats.mid) // OK
 // 		return(ss);
-// 	else if((*a)->se > 0 && (*a)->se <= stats.mid)
+// 	else if(a->se > 0 && a->se <= stats.mid)
 // 		return (sa);
-// 	else if(*b && (*b)->nx && (*b)->se < 0 && (*b)->se >= -stats.mid)
+// 	else if(*b && b->nx && b->se < 0 && b->se >= -stats.mid)
 // 		return (sb);
-// 	else if((*a)->se >= stats.mid)
+// 	else if(a->se >= stats.mid)
 // 		return (pb);
-// 	// else if (last_a->rk == (*b)->rk + 1)
+// 	// else if (last_a->rk == b->rk + 1)
 // 	// 	return (rra + pa);
 // 	else if (mid->rk < stats.mid)
 // 			return (ra * i * 100 + pa * 10);
@@ -313,7 +291,7 @@ int	bubble_sort(t_list **a, t_list **b, t_stats stats)
 // 	}
 	
 // 	// ft_//print("LIST A", a, stats);
-// 	// if(*b)
+// 	// ifb
 // 	// 	ft_//print("LIST B", b, stats);
 
 // 	// sort_swap(a, b, stats);

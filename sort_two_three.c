@@ -6,29 +6,29 @@
 /*   By: akouoi <akouoi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/22 19:12:33 by akouoi            #+#    #+#             */
-/*   Updated: 2022/06/26 13:13:46 by akouoi           ###   ########.fr       */
+/*   Updated: 2022/07/04 14:08:26 by akouoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	sort_two(t_list **lst, t_stats stats)
+int	sort_two(t_list *lst, t_stats stats)
 {
 
 	if (stats.size == 2)
 	{
-		if ((*lst)->nb > ((*lst)->nx)->nb)
+		if (lst->nb > (lst->nx)->nb)
 		{
-			stats.stdsum_a = move(lst, sa, stats);
-			ft_lstclear(lst, free);
+			stats.stdsum_a = move(&lst, sa, stats);
+			ft_lstclear(&lst, free);
 			return (1);
 		}
-		ft_lstclear(lst, free);
+		ft_lstclear(&lst, free);
 		return (0);
 	}
-	else if ((*lst)->rk == 1 && (*lst)->nx->rk == stats.size)
+	else if (lst->rk == 1 && lst->nx->rk == stats.size)
 	{
-		stats.stdsum_a = move(lst, sa, stats);
+		stats.stdsum_a = move(&lst, sa, stats);
 		return (1);
 	}
 	return(0);

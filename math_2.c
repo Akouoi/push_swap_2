@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   refresh.c                                          :+:      :+:    :+:   */
+/*   math_2.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akouoi <akouoi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/17 11:25:42 by akouoi            #+#    #+#             */
-/*   Updated: 2022/06/30 14:17:06 by akouoi           ###   ########.fr       */
+/*   Updated: 2022/07/04 14:43:17 by akouoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,12 +65,12 @@ int	ft_stdsum(t_list **lst, t_stats stats)
 	return (i);
 }
 
-int	serie_calc(t_list **a)
+int	serie_calc(t_list *a)
 {
 	int		i;
 	t_list	*tmp;
 
-	tmp = *a;
+	tmp = a;
 	i = 0;
 	while (tmp)
 	{
@@ -88,14 +88,11 @@ int	ft_serie(t_list **lst)
 	tmp = *lst;
 	while (tmp && tmp->nx)
 	{
-		// if (tmp->nx)
-		// {
-			tmp->se = tmp->rk - (tmp->nx)->rk;
-			// ft_printf("tmp->se = %+d\n", tmp->se);
-		// }
+		tmp->se = tmp->rk - (tmp->nx)->rk;
+
 		tmp = tmp->nx;
 	}
 	tmp->se = tmp->rk - (*lst)->rk;
-	return (serie_calc(lst));
+	return (serie_calc(*lst));
 }
 	// printf("\tserie_calc = %d\t", serie_calc(lst));

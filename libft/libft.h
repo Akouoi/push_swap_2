@@ -31,6 +31,8 @@ typedef struct s_list
 	int				pos;
 	int				gap;
 	int				se;
+	int				cost_a;
+	int				cost_b;
 	struct s_list	*nx;
 }	t_list;
 

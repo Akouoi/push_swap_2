@@ -6,7 +6,7 @@
 /*   By: akouoi <akouoi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/17 11:22:40 by akouoi            #+#    #+#             */
-/*   Updated: 2022/07/01 11:23:58 by akouoi           ###   ########.fr       */
+/*   Updated: 2022/07/04 14:30:27 by akouoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -108,7 +108,7 @@ void	push(t_list **src, t_list **dst);
 //		refresh.c
 //---------------------------------------------------------------------------------------
 
-int		serie_calc(t_list **a);
+int		serie_calc(t_list *a);
 
 int		ft_pos_shift(t_list **lst);
 
@@ -119,10 +119,18 @@ int		ft_serie(t_list **lst);
 t_list	*ft_lstmid(t_list **lst);
 
 //---------------------------------------------------------------------------------------
-//		maths.c
+//		math.c
 //---------------------------------------------------------------------------------------
 
+int		check_if(t_list **a, t_list **b, t_stats stats);
+
+int		find_nx(t_list **a, int j, t_stats stats);
+
+int		get_cost_b(t_list *a, t_list *b, t_stats stats);
+
 int		abs(int i);
+
+t_list	*ft_min(t_list *a, t_list *b);
 
 //---------------------------------------------------------------------------------------
 //		print,c
@@ -138,21 +146,14 @@ void	print_tab(char *str, t_list **a, t_list **b, t_stats stats);
 
 int		sort_three(t_list **lst, t_stats stats);
 
-int		sort_two(t_list **lst, t_stats stats);
+int		sort_two(t_list *lst, t_stats stats);
 
-//---------------------------------------------------------------------------------------
-//		utils
-//---------------------------------------------------------------------------------------
-
-int		check_if(t_list **a, t_list **b, t_stats stats);
-
-int		find_nx(t_list **a, int j);
 
 //---------------------------------------------------------------------------------------
 //		bubble_sort.c
 //---------------------------------------------------------------------------------------
 
-int		bubble_sort(t_list **a, t_list **b, t_stats stats);
+int		bubble_sort(t_list *a, t_list *b, t_stats stats);
 
 //---------------------------------------------------------------------------------------
 //		quick_sort.c
