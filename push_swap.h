@@ -6,7 +6,7 @@
 /*   By: akouoi <akouoi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/17 11:22:40 by akouoi            #+#    #+#             */
-/*   Updated: 2022/07/04 14:30:27 by akouoi           ###   ########.fr       */
+/*   Updated: 2022/07/05 17:32:40 by akouoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,9 +74,9 @@ t_stats	ft_statset(t_list **lst);
 //		moves.c
 //---------------------------------------------------------------------------------------
 
-int		move(t_list **lst, int i, t_stats stats);
+int		move_single(t_list **lst, int i, t_stats stats);
 
-int		move_double(t_list **a, t_list **b, int i, t_stats stats);
+int		move(t_list **a, t_list **b, int i, t_stats stats);
 
 //---------------------------------------------------------------------------------------
 //		move_s.c

@@ -6,7 +6,7 @@
 /*   By: akouoi <akouoi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/17 11:20:59 by akouoi            #+#    #+#             */
-/*   Updated: 2022/07/04 12:39:23 by akouoi           ###   ########.fr       */
+/*   Updated: 2022/07/05 17:36:31 by akouoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,14 +56,14 @@ void	move_double_r(t_list **a, t_list **b, int i, t_stats stats)
 {
 	if (i == rr)
 	{
-		stats.stdsum_a = move(a, ra, stats);
-		stats.stdsum_b = move(b, rb, stats);
+		stats.stdsum_a = move(a, b, ra, stats);
+		stats.stdsum_b = move(a, b, rb, stats);
 		printf("rr\n");
 	}
 	if (i == rrr)
 	{
-		stats.stdsum_a = move(a, rra, stats);
-		stats.stdsum_b = move(b, rrb, stats);
+		stats.stdsum_a = move(a, b, rra, stats);
+		stats.stdsum_b = move(a, b, rrb, stats);
 		printf("rrr\n");
 	}
 }

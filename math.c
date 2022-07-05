@@ -6,7 +6,7 @@
 /*   By: akouoi <akouoi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/22 19:04:06 by akouoi            #+#    #+#             */
-/*   Updated: 2022/07/04 17:05:55 by akouoi           ###   ########.fr       */
+/*   Updated: 2022/07/05 17:48:43 by akouoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ int	find_nx(t_list **a, int j, t_stats stats)
 			return (tmp->pos);
 		tmp = tmp->nx;
 	}
-	return (stats.size);
+	return (stats.size + 1);
 }
 
 int	get_cost_b(t_list *a, t_list *b, t_stats stats)
@@ -53,12 +53,14 @@ int	get_cost_b(t_list *a, t_list *b, t_stats stats)
 	tmp = b;
 	while (tmp)
 	{
-		if (tmp->pos < ft_lstsize(b) / 2)
-			tmp->cost_b = tmp->pos - 1;
+		if (tmp->pos <= ft_lstsize(b) / 2)
+			tmp->cost_b = tmp->pos;
 		else
-			tmp->cost_b = ft_lstsize(b) - tmp->pos;
-		next = find_nx(&a, tmp->rk, stats);
-		printf("b->nb %d\tnext = %d\n", tmp->rk, next);
+			tmp->cost_b = -(ft_lstsize(b) - tmp->pos + 1);
+		next = find_nx(&a, tmp->rk, stats) - 1;
+		printf("next= %d\n", next);
+		if (next > (double)(ft_lstsize(a) / 2) + 1)
+			next = - (ft_lstsize(a) - next);//find_nx(&a, tmp->rk, stats) + 1);
 		tmp->cost_a = next;
 		printf("cost_a %d\tcost_b %d\t sum %d\n", tmp->cost_a, tmp->cost_b, abs(tmp->cost_b) + abs(tmp->cost_a));
 		tmp = tmp->nx;

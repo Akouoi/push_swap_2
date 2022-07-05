@@ -6,7 +6,7 @@
 /*   By: akouoi <akouoi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/17 11:20:21 by akouoi            #+#    #+#             */
-/*   Updated: 2022/07/04 12:39:45 by akouoi           ###   ########.fr       */
+/*   Updated: 2022/07/05 17:38:19 by akouoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ void	ft_swap(t_list **lst, int i)
 void	move_ss(t_list **a, t_list **b, int i, t_stats stats)
 {
 	(void)i;
-	stats.stdsum_a = move(a, ss, stats);
-	stats.stdsum_b = move(b, ss, stats);
+	stats.stdsum_a = move_single(a, ss, stats);
+	stats.stdsum_b = move_single(b, ss, stats);
 	printf("ss\n");
 }
