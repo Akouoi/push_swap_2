@@ -6,7 +6,7 @@
 /*   By: akouoi <akouoi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/17 11:25:42 by akouoi            #+#    #+#             */
-/*   Updated: 2022/07/04 14:43:17 by akouoi           ###   ########.fr       */
+/*   Updated: 2022/07/05 18:55:01 by akouoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,7 @@ t_list	*ft_lstmid(t_list **lst)
 	i = ft_lstsize(*lst) / 2 + 1;
 	tmp = *lst;
 	while (--i)
-	{
 		tmp = tmp->nx;
-	}
 	return (tmp);
 }
 
@@ -89,7 +87,6 @@ int	ft_serie(t_list **lst)
 	while (tmp && tmp->nx)
 	{
 		tmp->se = tmp->rk - (tmp->nx)->rk;
-
 		tmp = tmp->nx;
 	}
 	tmp->se = tmp->rk - (*lst)->rk;

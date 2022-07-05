@@ -6,7 +6,7 @@
 /*   By: akouoi <akouoi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 12:38:22 by akouoi            #+#    #+#             */
-/*   Updated: 2022/07/05 17:51:01 by akouoi           ###   ########.fr       */
+/*   Updated: 2022/07/05 18:42:01 by akouoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,16 +19,18 @@ int	sort_swap(t_list **a, t_list **b, t_stats stats)
 	while ((*a) && b && (*a)->rk == (*b)->rk + 1)
 		stats.stdsum_a = move(a, b, pa, stats);
 	if (b && ((*a)->se > 0 && (*a)->se <= stats.mid)
-		&& ((*b)->rk - (*b)->nx->rk < 0 && (*b)->rk - (*b)->nx->rk > -stats.mid))
+		&& ((*b)->rk - (*b)->nx->rk < 0
+			&& (*b)->rk - (*b)->nx->rk > -stats.mid))
 		stats.stdsum_a = move(a, b, ss, stats);
 	else if ((*a)->rk - (*a)->nx->rk > 0 && (*a)->rk - (*a)->nx->rk < stats.mid)
 		stats.stdsum_a = move(a, b, sa, stats);
-	else if (b && (*b)->rk - (*b)->nx->rk < 0 && (*b)->rk - (*b)->nx->rk > -stats.mid)
+	else if (b && (*b)->rk - (*b)->nx->rk < 0
+		&& (*b)->rk - (*b)->nx->rk > -stats.mid)
 		stats.stdsum_b = move(a, b, sb, stats);
+	return (1);
+}
 	// print_tab("LISTE", a, b, stats);	
 	// sort_swap(a, b, stats);
-	return(1);
-}
 
 int	solve_sort(t_list **a, t_list **b, t_stats stats)
 {
@@ -95,13 +97,13 @@ int sort_test(t_list **a, t_list **b, t_stats stats)
 			stats.stdsum_a = move(a, b, rra, stats);
 	}
 	print_tab("LISTE after push", a, b, stats);
-	while (ft_lstsize(*a) > 3)
-	{
-		if ((*a)->rk <= stats.size - 3)
-			stats.stdsum_a = move(a, b, pb, stats);
-		else
-			stats.stdsum_a = move(a, b, rra, stats);
-	}
+	// while (ft_lstsize(*a) > 3)
+	// {
+	// 	if ((*a)->rk <= stats.size - 3)
+	// 		stats.stdsum_a = move(a, b, pb, stats);
+	// 	else
+	// 		stats.stdsum_a = move(a, b, rra, stats);
+	// }
 	// if (ft_lstsize(*a) == stats.mid)
 	if (ft_lstsize(*a) == 3)
 		sort_three(a, stats);

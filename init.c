@@ -6,7 +6,7 @@
 /*   By: akouoi <akouoi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/17 11:19:07 by akouoi            #+#    #+#             */
-/*   Updated: 2022/07/04 12:31:23 by akouoi           ###   ########.fr       */
+/*   Updated: 2022/07/05 18:53:54 by akouoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,10 +34,8 @@ t_stats	ft_statset(t_list **lst)
 		*lst = (*lst)->nx;
 		stats.size += 1;
 	}
-	stats.move = 0;
 	*lst = start;
 	stats.stdsum_a = ft_stdsum(lst, stats);
-	stats.stdsum_b = 0;
 	stats.mid = stats.size / 2;
 	return (stats);
 }

@@ -6,11 +6,12 @@
 /*   By: akouoi <akouoi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/22 15:15:22 by akouoi            #+#    #+#             */
-/*   Updated: 2022/07/05 17:37:00 by akouoi           ###   ########.fr       */
+/*   Updated: 2022/07/05 18:53:18 by akouoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
 int	move_single(t_list **lst, int i, t_stats stats)
 {
 	void	(*move[7])(t_list**, int);
