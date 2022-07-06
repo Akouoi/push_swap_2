@@ -6,7 +6,7 @@
 /*   By: akouoi <akouoi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/22 15:15:22 by akouoi            #+#    #+#             */
-/*   Updated: 2022/07/05 18:53:18 by akouoi           ###   ########.fr       */
+/*   Updated: 2022/07/06 17:36:24 by akouoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int	move_single(t_list **lst, int i, t_stats stats)
 	move[rrb] = ft_rrotate;
 	move[i](lst, i);
 	ft_pos_shift(lst);
-	return (ft_stdsum(lst, stats));
+	return (0);
 }
 
 int	move(t_list **a, t_list **b, int i, t_stats stats)
@@ -52,5 +52,6 @@ int	move(t_list **a, t_list **b, int i, t_stats stats)
 		ft_pos_shift(b);
 		get_cost_b(*a, *b, stats);
 	}
+	stats.stdsum_b = ft_stdsum(b, stats);
 	return (ft_stdsum(a, stats));
 }

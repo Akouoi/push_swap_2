@@ -6,7 +6,7 @@
 /*   By: akouoi <akouoi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 12:38:22 by akouoi            #+#    #+#             */
-/*   Updated: 2022/07/06 15:10:54 by akouoi           ###   ########.fr       */
+/*   Updated: 2022/07/06 17:44:08 by akouoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,10 +27,10 @@ int	sort_swap(t_list **a, t_list **b, t_stats stats)
 	else if (b && (*b)->rk - (*b)->nx->rk < 0
 		&& (*b)->rk - (*b)->nx->rk > -stats.mid)
 		stats.stdsum_b = move(a, b, sb, stats);
+	sort_swap(a, b, stats);
 	return (1);
 }
 	// print_tab("LISTE", a, b, stats);	
-	// sort_swap(a, b, stats);
 
 int	solve_sort(t_list **a, t_list **b, t_stats stats)
 {
@@ -39,6 +39,7 @@ int	solve_sort(t_list **a, t_list **b, t_stats stats)
 	// int	i;
 	if (!(*b))
 		return (1);
+	print_tab("LISTE solve_sort", a, b, stats);
 	tmp = *b;
 	min = tmp;
 	while (tmp)
@@ -82,37 +83,35 @@ int	solve_sort(t_list **a, t_list **b, t_stats stats)
 int sort_test(t_list **a, t_list **b, t_stats stats)
 {
 
-	// (void)b;
-	// i = stats.size - 3;
 	stats.stdsum_a = ft_stdsum(a, stats);
-
 	if (stats.stdsum_a == 0)
 		return (0);
-	while (ft_lstsize(*a) > stats.serie && ft_lstsize(*a) > stats.mid)
+	while (ft_lstsize(*a) > (int)stats.mid + 1)
 	{
-	// printf("int %d\t%.1f\n", i, stats.size);
-		if ((*a)->se > -1 || (*a)->rk <= stats.mid)
+		if ((*a)->rk < stats.mid)
 			stats.stdsum_a = move(a, b, pb, stats);
 		else
 			stats.stdsum_a = move(a, b, rra, stats);
 	}
-	print_tab("LISTE after push", a, b, stats);
-	// while (ft_lstsize(*a) > 3)
-	// {
-	// 	if ((*a)->rk <= stats.size - 3)
-	// 		stats.stdsum_a = move(a, b, pb, stats);
-	// 	else
-	// 		stats.stdsum_a = move(a, b, rra, stats);
-	// }
+	print_tab("LISTE after push", a, b, stats);	
+	stats.serie = ft_serie(a);
+	printf("serie = %d\n", stats.serie);
+	while (ft_lstsize(*a) - stats.serie && ft_lstsize(*a) > 4)
+	{
+		if ((*a)->se != -1 && ft_lstlast(*a)->rk != (*a)->rk - 1)
+			stats.stdsum_a = move(a, b, pb, stats);
+		else
+			stats.stdsum_a = move(a, b, rra, stats);
+	}
+
 	// if (ft_lstsize(*a) == stats.mid)
 	// if (ft_lstsize(*a) == 3)
 	// 	sort_three(a, stats);
 	
 	// get_cost_b(*a, *b, stats);
-	
-	// solve_sort(a, b, stats);
-	print_tab("LISTE after push", a, b, stats);
+
+	solve_sort(a, b, stats);
 	// if (a && b)
-	// 	sort_swap(a, b, stats);
+		// sort_swap(a, b, stats);
 	return(1);
 }

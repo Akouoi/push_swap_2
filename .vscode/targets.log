@@ -8,7 +8,7 @@ make[1]: *** No rule to make target 'ft_atoi.o', needed by 'libft.a'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Wed Jul  6 14:40:44 2022
+# Make data base, printed on Wed Jul  6 17:05:10 2022
 
 # Variables
 
@@ -51,7 +51,7 @@ VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupp
 # environment
 _ = /usr/bin/code
 # environment
-JOURNAL_STREAM = 9:71686
+JOURNAL_STREAM = 9:54593
 # environment
 XDG_CONFIG_DIRS = /etc/xdg/xdg-ubuntu:/etc/xdg
 # makefile (from 'Makefile', line 1)
@@ -59,7 +59,7 @@ MAKEFILE_LIST :=  Makefile
 # automatic
 @F = $(notdir $@)
 # environment
-IM_CONFIG_PHASE = 1
+GIO_LAUNCHED_DESKTOP_FILE = /usr/share/applications/code.desktop
 # 'override' directive
 GNUMAKEFLAGS := 
 # environment
@@ -71,15 +71,15 @@ DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/101966/bus
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-MANAGERPID = 6993
+MANAGERPID = 3268
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/101966/vscode-ipc-44ced0ef-ac15-45be-8937-38c6a0a2377e.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/101966/vscode-ipc-064dd00d-aca1-4f03-a3b9-81063ba1a54c.sock
 # environment
 VSCODE_CWD = /mnt/nfs/homes/akouoi/repo/push_swap
 # environment
 XDG_SESSION_PATH = /org/freedesktop/DisplayManager/Session0
 # environment
-KRB5CCNAME = FILE:/tmp/krb5cc_101966_xFFwBZ
+KRB5CCNAME = FILE:/tmp/krb5cc_101966_k7cVZE
 # default
 MAKE_HOST := x86_64-pc-linux-gnu
 # environment
@@ -89,7 +89,7 @@ GPG_AGENT_INFO = /run/user/101966/gnupg/S.gpg-agent:0:1
 # environment
 LSCOLORS = Gxfxcxdxbxegedabagacad
 # environment
-SESSION_MANAGER = local/e1r6p8.clusters.42paris.fr:@/tmp/.ICE-unix/7537,unix/e1r6p8.clusters.42paris.fr:/tmp/.ICE-unix/7537
+SESSION_MANAGER = local/e1r7p9.42.fr:@/tmp/.ICE-unix/3837,unix/e1r7p9.42.fr:/tmp/.ICE-unix/3837
 # environment
 XDG_RUNTIME_DIR = /run/user/101966
 # environment
@@ -101,7 +101,7 @@ VSCODE_LOG_STACK = false
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-INVOCATION_ID = e8e0e4af1d4e4aeb82ca030462df03df
+INVOCATION_ID = 80687d60e4ea41caa0d187d51fae84b7
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
@@ -112,6 +112,8 @@ LS_COLORS = rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:
 XDG_SESSION_DESKTOP = ubuntu
 # environment
 SSH_AUTH_SOCK = /run/user/101966/keyring/ssh
+# environment
+GIO_LAUNCHED_DESKTOP_FILE_PID = 4891
 # automatic
 %F = $(notdir $%)
 # environment
@@ -123,7 +125,7 @@ PWD = /mnt/nfs/homes/akouoi/repo/push_swap
 # default
 .LOADED := 
 # environment
-SSH_AGENT_PID = 7501
+SSH_AGENT_PID = 3801
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = ubuntu:GNOME
 # environment
@@ -164,6 +166,8 @@ QT_IM_MODULE = ibus
 SHLVL = 2
 # makefile (from 'Makefile', line 2)
 CC = gcc
+# environment
+IM_CONFIG_PHASE = 1
 # default
 MAKE_VERSION := 4.2.1
 # environment
@@ -203,6 +207,8 @@ GDK_BACKEND = x11
 # automatic
 +F = $(notdir $+)
 # environment
+NO_AT_BRIDGE = 1
+# environment
 QT_ACCESSIBILITY = 1
 # environment
 DEFAULTS_PATH = /usr/share/gconf/ubuntu.default.path
@@ -217,11 +223,11 @@ ELECTRON_NO_ATTACH_CONSOLE = 1
 # environment
 GJS_DEBUG_TOPICS = JS ERROR;JS LOG
 # environment
-GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/f6fdae52_d6f0_4b1f_8988_b469156c4e18
+GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/69bc89d7_dbc3_4ad0_9295_8f3a0f71cc63
 # automatic
 ^F = $(notdir $^)
 # environment
-GNOME_TERMINAL_SERVICE = :1.80
+GNOME_TERMINAL_SERVICE = :1.82
 # default
 SUFFIXES := 
 # environment
@@ -241,9 +247,9 @@ TERM = xterm-256color
 # environment
 DOCKER_HOST = unix:///run/user/101966/docker.sock
 # environment
-VSCODE_PID = 9679
+VSCODE_PID = 4891
 # variable set hash-table stats:
-# Load=115/1024=11%, Rehash=0, Collisions=17/147=12%
+# Load=118/1024=12%, Rehash=0, Collisions=18/150=12%
 
 # Pattern-specific Variable Values
 
@@ -284,6 +290,7 @@ ft_memcmp.o:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
+ 
 
 # Not a target:
 ft_strlen.o:
@@ -307,7 +314,6 @@ all: libft.a
 #  Phony target (prerequisite of .PHONY).
 #  Command line target.
 #  Implicit rule search has not been done.
- 
 #  File does not exist.
 #  File has not been updated.
 
@@ -578,6 +584,7 @@ ft_strnstr.o:
 # Not a target:
 ft_putstr_fd.o:
 #  Implicit rule search has not been done.
+ 
 #  Modification time never checked.
 #  File has not been updated.
 
@@ -585,7 +592,6 @@ ft_putstr_fd.o:
 ft_lstlast_bonus.o:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
- 
 #  File has not been updated.
 
 # Not a target:
@@ -638,7 +644,7 @@ ft_putendl_fd.o:
 # strcache performance: lookups = 136 / hit rate = 15%
 # hash-table stats:
 # Load=115/8192=1%, Rehash=0, Collisions=4/136=3%
-# Finished Make data base on Wed Jul  6 14:40:44 2022
+# Finished Make data base on Wed Jul  6 17:05:10 2022
 
 # GNU Make 4.2.1
 # Built for x86_64-pc-linux-gnu
@@ -647,7 +653,7 @@ ft_putendl_fd.o:
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Wed Jul  6 14:40:44 2022
+# Make data base, printed on Wed Jul  6 17:05:10 2022
 
 # Variables
 
@@ -694,7 +700,7 @@ _ = /usr/bin/code
 # makefile (from 'Makefile', line 5)
 c = \033[0m"
 # environment
-JOURNAL_STREAM = 9:71686
+JOURNAL_STREAM = 9:54593
 # environment
 XDG_CONFIG_DIRS = /etc/xdg/xdg-ubuntu:/etc/xdg
 # makefile (from 'Makefile', line 1)
@@ -702,7 +708,7 @@ MAKEFILE_LIST :=  Makefile
 # automatic
 @F = $(notdir $@)
 # environment
-IM_CONFIG_PHASE = 1
+GIO_LAUNCHED_DESKTOP_FILE = /usr/share/applications/code.desktop
 # 'override' directive
 GNUMAKEFLAGS := 
 # environment
@@ -714,15 +720,15 @@ DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/101966/bus
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-MANAGERPID = 6993
+MANAGERPID = 3268
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/101966/vscode-ipc-44ced0ef-ac15-45be-8937-38c6a0a2377e.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/101966/vscode-ipc-064dd00d-aca1-4f03-a3b9-81063ba1a54c.sock
 # environment
 VSCODE_CWD = /mnt/nfs/homes/akouoi/repo/push_swap
 # environment
 XDG_SESSION_PATH = /org/freedesktop/DisplayManager/Session0
 # environment
-KRB5CCNAME = FILE:/tmp/krb5cc_101966_xFFwBZ
+KRB5CCNAME = FILE:/tmp/krb5cc_101966_k7cVZE
 # default
 MAKE_HOST := x86_64-pc-linux-gnu
 # environment
@@ -732,7 +738,7 @@ GPG_AGENT_INFO = /run/user/101966/gnupg/S.gpg-agent:0:1
 # environment
 LSCOLORS = Gxfxcxdxbxegedabagacad
 # environment
-SESSION_MANAGER = local/e1r6p8.clusters.42paris.fr:@/tmp/.ICE-unix/7537,unix/e1r6p8.clusters.42paris.fr:/tmp/.ICE-unix/7537
+SESSION_MANAGER = local/e1r7p9.42.fr:@/tmp/.ICE-unix/3837,unix/e1r7p9.42.fr:/tmp/.ICE-unix/3837
 # environment
 XDG_RUNTIME_DIR = /run/user/101966
 # environment
@@ -742,7 +748,7 @@ VSCODE_LOG_STACK = false
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-INVOCATION_ID = e8e0e4af1d4e4aeb82ca030462df03df
+INVOCATION_ID = 80687d60e4ea41caa0d187d51fae84b7
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
@@ -755,6 +761,8 @@ LS_COLORS = rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:
 XDG_SESSION_DESKTOP = ubuntu
 # environment
 SSH_AUTH_SOCK = /run/user/101966/keyring/ssh
+# environment
+GIO_LAUNCHED_DESKTOP_FILE_PID = 4891
 # automatic
 %F = $(notdir $%)
 # environment
@@ -766,7 +774,7 @@ PWD = /mnt/nfs/homes/akouoi/repo/push_swap
 # default
 .LOADED := 
 # environment
-SSH_AGENT_PID = 7501
+SSH_AGENT_PID = 3801
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = ubuntu:GNOME
 # environment
@@ -811,6 +819,8 @@ QT_IM_MODULE = ibus
 SHLVL = 2
 # makefile (from 'Makefile', line 6)
 CC = gcc
+# environment
+IM_CONFIG_PHASE = 1
 # default
 MAKE_VERSION := 4.2.1
 # environment
@@ -850,6 +860,8 @@ GDK_BACKEND = x11
 # automatic
 +F = $(notdir $+)
 # environment
+NO_AT_BRIDGE = 1
+# environment
 QT_ACCESSIBILITY = 1
 # environment
 DEFAULTS_PATH = /usr/share/gconf/ubuntu.default.path
@@ -864,11 +876,14 @@ LC_ALL = C
 # environment
 GJS_DEBUG_TOPICS = JS ERROR;JS LOG
 # environment
-GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/f6fdae52_d6f0_4b1f_8988_b469156c4e18
+ 
+make: *** [Makefile:53: main.o] Error 2
+
+GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/69bc89d7_dbc3_4ad0_9295_8f3a0f71cc63
 # automatic
 ^F = $(notdir $^)
 # environment
-GNOME_TERMINAL_SERVICE = :1.80
+GNOME_TERMINAL_SERVICE = :1.82
 # default
 SUFFIXES := 
 # environment
@@ -878,9 +893,6 @@ CHROME_DESKTOP = code-url-handler.desktop
 # environment
 GJS_DEBUG_OUTPUT = stderr
 # makefile (from 'Makefile', line 1)
- 
-make: *** [Makefile:53: main.o] Error 2
-
 NAME = push_swap 
 # default
 .RECIPEPREFIX := 
@@ -891,9 +903,9 @@ TERM = xterm-256color
 # environment
 DOCKER_HOST = unix:///run/user/101966/docker.sock
 # environment
-VSCODE_PID = 9679
+VSCODE_PID = 4891
 # variable set hash-table stats:
-# Load=119/1024=12%, Rehash=0, Collisions=18/155=12%
+# Load=122/1024=12%, Rehash=0, Collisions=19/158=12%
 
 # Pattern-specific Variable Values
 
@@ -945,7 +957,7 @@ all: push_swap clean
 # Not a target:
 main.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-05 18:52:50.10567716
+#  Last modified 2022-07-06 15:08:23.28948644
 #  File has been updated.
 #  Successfully updated.
 
@@ -1042,7 +1054,7 @@ check_arg.o:
 
 push_swap: main.o check_arg.o init.o moves.o move_r.o move_p.o move_s.o print.o sort_bubble.o sort_quick.o sort_two_three.o sort_test.o math.o math_2.o
 #  Implicit rule search has not been done.
-#  Last modified 2022-07-06 14:39:33.954653721
+#  Last modified 2022-07-06 15:10:58.243291645
 #  File has not been updated.
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/7=0%
@@ -1144,6 +1156,6 @@ sort_bubble.o:
 # strcache performance: lookups = 80 / hit rate = 30%
 # hash-table stats:
 # Load=56/8192=1%, Rehash=0, Collisions=1/80=1%
-# Finished Make data base on Wed Jul  6 14:40:44 2022
+# Finished Make data base on Wed Jul  6 17:05:10 2022
 
  
