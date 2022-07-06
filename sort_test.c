@@ -6,7 +6,7 @@
 /*   By: akouoi <akouoi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 12:38:22 by akouoi            #+#    #+#             */
-/*   Updated: 2022/07/05 18:42:01 by akouoi           ###   ########.fr       */
+/*   Updated: 2022/07/06 15:10:54 by akouoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,15 +83,15 @@ int sort_test(t_list **a, t_list **b, t_stats stats)
 {
 
 	// (void)b;
- 
-	stats.serie = ft_serie(a);
 	// i = stats.size - 3;
-	// printf("int %d\t%.1f\n", i, stats.size);
+	stats.stdsum_a = ft_stdsum(a, stats);
+
 	if (stats.stdsum_a == 0)
 		return (0);
-	while (ft_lstsize(*a) > stats.mid)
+	while (ft_lstsize(*a) > stats.serie && ft_lstsize(*a) > stats.mid)
 	{
-		if ((*a)->rk <= stats.mid)
+	// printf("int %d\t%.1f\n", i, stats.size);
+		if ((*a)->se > -1 || (*a)->rk <= stats.mid)
 			stats.stdsum_a = move(a, b, pb, stats);
 		else
 			stats.stdsum_a = move(a, b, rra, stats);
@@ -105,10 +105,10 @@ int sort_test(t_list **a, t_list **b, t_stats stats)
 	// 		stats.stdsum_a = move(a, b, rra, stats);
 	// }
 	// if (ft_lstsize(*a) == stats.mid)
-	if (ft_lstsize(*a) == 3)
-		sort_three(a, stats);
+	// if (ft_lstsize(*a) == 3)
+	// 	sort_three(a, stats);
 	
-	get_cost_b(*a, *b, stats);
+	// get_cost_b(*a, *b, stats);
 	
 	// solve_sort(a, b, stats);
 	print_tab("LISTE after push", a, b, stats);
