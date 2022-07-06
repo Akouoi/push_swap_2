@@ -6,7 +6,7 @@
 /*   By: akouoi <akouoi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/17 11:28:03 by akouoi            #+#    #+#             */
-/*   Updated: 2022/07/06 17:26:28 by akouoi           ###   ########.fr       */
+/*   Updated: 2022/07/06 18:03:04 by akouoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,11 +37,6 @@ void	ft_print(char *str, char *name, t_list **lst)
 		tmp = tmp->nx;
 	}
 	tmp = *lst;
-	// write (1, "\n", 1);
-	// i = 0;
-	// while (++i < 80)
-	// 	ft_putchar_fd('-', 1);
-	// write (1, "\n", 1);
 }
 
 void	print_tab(char *str, t_list **a, t_list **b, t_stats stats)

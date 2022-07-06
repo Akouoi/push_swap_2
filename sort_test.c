@@ -6,7 +6,7 @@
 /*   By: akouoi <akouoi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 12:38:22 by akouoi            #+#    #+#             */
-/*   Updated: 2022/07/06 17:44:08 by akouoi           ###   ########.fr       */
+/*   Updated: 2022/07/06 18:00:56 by akouoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -110,7 +110,7 @@ int sort_test(t_list **a, t_list **b, t_stats stats)
 	
 	// get_cost_b(*a, *b, stats);
 
-	solve_sort(a, b, stats);
+	// solve_sort(a, b, stats);
 	// if (a && b)
 		// sort_swap(a, b, stats);
 	return(1);
