@@ -6,7 +6,7 @@
 /*   By: akouoi <akouoi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/17 11:19:07 by akouoi            #+#    #+#             */
-/*   Updated: 2022/07/05 18:53:54 by akouoi           ###   ########.fr       */
+/*   Updated: 2022/07/07 14:19:51 by akouoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,18 +43,19 @@ t_stats	ft_statset(t_list **lst)
 void	ft_lstadd_num(t_list **lst, int new)
 {
 	t_list	*tmp;
+	t_list	*newlst;
 
-	if (*lst)
+	newlst = malloc(sizeof(t_list));
+	newlst->nb = new;
+	newlst->nx = NULL;
+	if (*lst && newlst)
 	{
-		tmp = *lst;
-		tmp = (ft_lstlast(*(lst)));
-		tmp->nx = malloc(sizeof(t_list));
-		tmp->nx->nb = new;
+		tmp = (ft_lstlast(*lst));
+		tmp->nx = newlst;
 	}
 	else
 	{
-		*lst = malloc(sizeof(t_list));
-		(*lst)->nb = new;
+		*lst = newlst;
 	}
 }
 
@@ -63,7 +64,7 @@ t_list	**ft_lstset(int ac, char **av)
 	t_list	**lst;
 	int		i;
 
-	lst = malloc(sizeof(t_list **));
+	lst = malloc(sizeof(t_list));
 	if (!lst)
 		return (NULL);
 	i = 0;

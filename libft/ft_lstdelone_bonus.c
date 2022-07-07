@@ -6,7 +6,7 @@
 /*   By: akouoi <akouoi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/02 14:36:36 by akouoi            #+#    #+#             */
-/*   Updated: 2022/05/06 11:41:52 by akouoi           ###   ########.fr       */
+/*   Updated: 2022/07/07 14:25:42 by akouoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,12 @@
 
 void	ft_lstdelone(t_list *lst, void (*pdel)(void *))
 {
-	if (lst)
-		(*pdel)(lst->content);
-	free(lst);
+	if (lst && pdel)
+	{
+		if (lst->content)
+			(*pdel)(lst->content);
+		free(lst);
+	}
 }
 /*
 int	main()

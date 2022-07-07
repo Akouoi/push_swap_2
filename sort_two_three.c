@@ -6,7 +6,7 @@
 /*   By: akouoi <akouoi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/22 19:12:33 by akouoi            #+#    #+#             */
-/*   Updated: 2022/07/05 18:59:13 by akouoi           ###   ########.fr       */
+/*   Updated: 2022/07/07 10:03:18 by akouoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,10 +35,11 @@ int	sort_two(t_list *lst, t_stats stats)
 
 int	sort_three(t_list **lst, t_stats stats)
 {
-	if ((*lst)->se < 0 && (*lst)->nx->se < 0)
+//	if ((*lst)->se < 0 && (*lst)->nx->se < 0)
+	if (ft_stdsum(lst, stats) == 0)
 	{
-		if (ft_lstsize(*lst) == stats.size)
-			ft_lstclear(lst, free);
+	//	if (ft_lstsize(*lst) == stats.size)
+	//		ft_lstclear(lst, free);
 		return (0);
 	}
 	if ((*lst)->se > 0 && (*lst)->nx->se > 0)
