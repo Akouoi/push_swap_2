@@ -22,7 +22,7 @@ SRC = main.c \
 
 OBJ= $(SRC:.c=.o)
 
-all: $(NAME) clean
+all: $(NAME)
 $(NAME): $(OBJ)
 	$(CC) $(OBJ) -L libft/. -lft -g -o $(NAME)
 	# @echo $(cO)           __ __			$(c)

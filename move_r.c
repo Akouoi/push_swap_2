@@ -6,7 +6,7 @@
 /*   By: akouoi <akouoi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/17 11:20:59 by akouoi            #+#    #+#             */
-/*   Updated: 2022/07/09 15:07:08 by akouoi           ###   ########.fr       */
+/*   Updated: 2022/07/09 15:17:50 by akouoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,6 @@ void	ft_rotate(t_list **lst, int i)
 		printf("ra\n");
 	if (i == rb)
 		printf("rb\n");
-	printf("yeah r\n");
 }
 
 void	ft_rrotate(t_list **lst, int i)
@@ -59,7 +58,7 @@ void	move_double_r(t_list **a, t_list **b, int i, t_stats stats)
 	{
 		stats.stdsum_a = move_single(a, rr, stats);
 		stats.stdsum_b = move_single(b, rr, stats);
-		printf("yeah rr\n");
+		printf("rr\n");
 	}
 	if (i == rrr)
 	{
