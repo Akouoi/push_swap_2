@@ -1,6 +1,4 @@
 make all --print-data-base --no-builtin-variables --no-builtin-rules --question
-make[1]: *** No rule to make target 'ft_atoi.o', needed by 'libft.a'.  Stop.
-
 # GNU Make 4.2.1
 # Built for x86_64-pc-linux-gnu
 # Copyright (C) 1988-2016 Free Software Foundation, Inc.
@@ -8,7 +6,7 @@ make[1]: *** No rule to make target 'ft_atoi.o', needed by 'libft.a'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Thu Jul  7 13:47:59 2022
+# Make data base, printed on Sat Jul  9 11:57:33 2022
 
 # Variables
 
@@ -32,6 +30,7 @@ XDG_SESSION_TYPE = x11
 VSCODE_LOG_NATIVE = false
 # automatic
 ?D = $(patsubst %/,%,$(dir $?))
+ 
 # automatic
 @D = $(patsubst %/,%,$(dir $@))
 # environment
@@ -41,7 +40,7 @@ GDMSESSION = ubuntu
 # environment
 XMODIFIERS = @im=ibus
 # makefile
-CURDIR := /mnt/nfs/homes/akouoi/repo/push_swap/libft
+CURDIR := /mnt/nfs/homes/akouoi/circle_2/push_swap/libft
 # makefile
 SHELL = /bin/sh
 # environment
@@ -53,7 +52,7 @@ VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupp
 # environment
 _ = /usr/bin/code
 # environment
-JOURNAL_STREAM = 9:1927275
+JOURNAL_STREAM = 9:323944
 # environment
 XDG_CONFIG_DIRS = /etc/xdg/xdg-ubuntu:/etc/xdg
 # makefile (from 'Makefile', line 1)
@@ -73,15 +72,15 @@ DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/101966/bus
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-MANAGERPID = 433402
+MANAGERPID = 67880
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/101966/vscode-ipc-00249b44-88ff-45b2-8986-e8c79f75ea7d.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/101966/vscode-ipc-c365b2e8-187a-429e-9dd5-38fb5d3214c4.sock
 # environment
-VSCODE_CWD = /mnt/nfs/homes/akouoi/repo/push_swap
+VSCODE_CWD = /mnt/nfs/homes/akouoi/circle_2/push_swap
 # environment
-XDG_SESSION_PATH = /org/freedesktop/DisplayManager/Session6
+XDG_SESSION_PATH = /org/freedesktop/DisplayManager/Session1
 # environment
-KRB5CCNAME = FILE:/tmp/krb5cc_101966_pA1sNB
+KRB5CCNAME = FILE:/tmp/krb5cc_101966_GJSA0T
 # default
 MAKE_HOST := x86_64-pc-linux-gnu
 # environment
@@ -91,7 +90,7 @@ GPG_AGENT_INFO = /run/user/101966/gnupg/S.gpg-agent:0:1
 # environment
 LSCOLORS = Gxfxcxdxbxegedabagacad
 # environment
-SESSION_MANAGER = local/e1r3p14.clusters.42paris.fr:@/tmp/.ICE-unix/433929,unix/e1r3p14.clusters.42paris.fr:/tmp/.ICE-unix/433929
+SESSION_MANAGER = local/e1r3p14.clusters.42paris.fr:@/tmp/.ICE-unix/68421,unix/e1r3p14.clusters.42paris.fr:/tmp/.ICE-unix/68421
 # environment
 XDG_RUNTIME_DIR = /run/user/101966
 # environment
@@ -103,7 +102,7 @@ VSCODE_LOG_STACK = false
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-INVOCATION_ID = 1c1b44a1cdc844cda888ecdae9678586
+INVOCATION_ID = 3db3f16f03a947109daa8a3e8c76b589
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
@@ -121,11 +120,11 @@ DISPLAY = :0
 # environment
 VSCODE_PIPE_LOGGING = true
 # environment
-PWD = /mnt/nfs/homes/akouoi/repo/push_swap
+PWD = /mnt/nfs/homes/akouoi/circle_2/push_swap
 # default
 .LOADED := 
 # environment
-SSH_AGENT_PID = 433893
+SSH_AGENT_PID = 68384
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = ubuntu:GNOME
 # environment
@@ -159,7 +158,7 @@ COLORTERM = truecolor
 # default
 MAKE = $(MAKE_COMMAND)
 # default
-MAKECMDGOALS := all
+MAKECMDGOALS := fclean
 # environment
 QT_IM_MODULE = ibus
 # environment
@@ -183,7 +182,7 @@ LESS = -R
 # default
 MAKE_COMMAND := make
 # environment
-OLDPWD = /mnt/nfs/homes/akouoi
+OLDPWD = /mnt/nfs/homes/akouoi/circle_2
 # default
 .VARIABLES := 
 # automatic
@@ -221,11 +220,11 @@ ELECTRON_NO_ATTACH_CONSOLE = 1
 # environment
 GJS_DEBUG_TOPICS = JS ERROR;JS LOG
 # environment
-GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/e0c27149_fcef_4d8b_b8f5_21e021aa8ab3
+GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/ac7b46ef_e22a_43f8_877e_82b4d38d0652
 # automatic
 ^F = $(notdir $^)
 # environment
-GNOME_TERMINAL_SERVICE = :1.78
+GNOME_TERMINAL_SERVICE = :1.83
 # default
 SUFFIXES := 
 # environment
@@ -245,9 +244,9 @@ TERM = xterm-256color
 # environment
 DOCKER_HOST = unix:///run/user/101966/docker.sock
 # environment
-VSCODE_PID = 438331
+VSCODE_PID = 69604
 # variable set hash-table stats:
-# Load=117/1024=11%, Rehash=0, Collisions=17/149=11%
+# Load=117/1024=11%, Rehash=0, Collisions=18/154=12%
 
 # Pattern-specific Variable Values
 
@@ -255,9 +254,9 @@ VSCODE_PID = 438331
 
 # Directories
 
-# . (device 59, inode 32770916): 53 files, no impossibilities.
+# . (device 55, inode 32770916): 102 files, no impossibilities.
 
-# 53 files, no impossibilities in 1 directories.
+# 102 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -279,7 +278,6 @@ ft_memcpy.o:
 
 # Not a target:
 ft_itoa.o:
- 
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
@@ -310,7 +308,6 @@ ft_dec.o:
 
 all: libft.a
 #  Phony target (prerequisite of .PHONY).
-#  Command line target.
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
@@ -323,6 +320,7 @@ ft_memchr.o:
 
 # Not a target:
 ft_lstnew_bonus.o:
+ 
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
@@ -370,6 +368,12 @@ ft_strlcat.o:
 #  File has not been updated.
 
 # Not a target:
+.SUFFIXES:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+# Not a target:
 Makefile:
 #  Implicit rule search has been done.
 #  Last modified 2022-06-30 14:44:43.887152045
@@ -390,7 +394,7 @@ ft_isprint.o:
 
 libft.a: ft_atoi.o ft_bzero.o ft_calloc.o ft_isalnum.o ft_isalpha.o ft_isascii.o ft_isdigit.o ft_isprint.o ft_itoa.o ft_memchr.o ft_memcmp.o ft_memcpy.o ft_memmove.o ft_memset.o ft_putchar_fd.o ft_putendl_fd.o ft_putnbr_fd.o ft_putstr_fd.o ft_split.o ft_strchr.o ft_strdup.o ft_striteri.o ft_strjoin.o ft_strlcpy.o ft_strlen.o ft_strlcat.o ft_strmapi.o ft_strncmp.o ft_strnstr.o ft_strrchr.o ft_strtrim.o ft_substr.o ft_tolower.o ft_toupper.o ft_dec.o ft_hex.o ft_str.o ft_printf.o ft_lstnew_bonus.o ft_lstadd_front_bonus.o ft_lstsize_bonus.o ft_lstlast_bonus.o ft_lstadd_back_bonus.o ft_lstdelone_bonus.o ft_lstiter_bonus.o ft_lstclear_bonus.o ft_lstmap_bonus.o
 #  Implicit rule search has not been done.
-#  File does not exist.
+#  Modification time never checked.
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 58):
 	ar rc $(NAME) $^
@@ -458,9 +462,13 @@ ft_putnbr_fd.o:
 
 fclean: clean
 #  Phony target (prerequisite of .PHONY).
+#  Command line target.
 #  Implicit rule search has not been done.
 #  File does not exist.
-#  File has not been updated.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/5=0%
 #  recipe to execute (from 'Makefile', line 68):
 	rm -f $(NAME)
 
@@ -514,8 +522,28 @@ re: fclean all
 clean:
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
+#  Implicit/static pattern stem: ''
 #  File does not exist.
-#  File has not been updated.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# automatic
+# @ := clean
+# automatic
+# % := 
+# automatic
+# * := 
+# automatic
+# + := 
+# automatic
+# | := 
+# automatic
+# < := 
+# automatic
+# ^ := 
+# automatic
+# ? := 
+# variable set hash-table stats:
+# Load=8/32=25%, Rehash=0, Collisions=3/13=23%
 #  recipe to execute (from 'Makefile', line 65):
 	rm -f $(OBJ)
 
@@ -567,7 +595,6 @@ ft_strchr.o:
 #  Modification time never checked.
 #  File has not been updated.
 
- 
 # Not a target:
 ft_toupper.o:
 #  Implicit rule search has not been done.
@@ -583,6 +610,7 @@ ft_strnstr.o:
 # Not a target:
 ft_putstr_fd.o:
 #  Implicit rule search has not been done.
+ 
 #  Modification time never checked.
 #  File has not been updated.
 
@@ -600,8 +628,8 @@ ft_putchar_fd.o:
 
 # Not a target:
 ft_atoi.o:
-#  Implicit rule search has been done.
-#  File does not exist.
+#  Implicit rule search has not been done.
+#  Modification time never checked.
 #  File has not been updated.
 
 # Not a target:
@@ -629,20 +657,20 @@ ft_putendl_fd.o:
 #  File has not been updated.
 
 # files hash-table stats:
-# Load=60/1024=6%, Rehash=0, Collisions=6/129=5%
+# Load=60/1024=6%, Rehash=0, Collisions=6/130=5%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 115 / storage = 1468 B / avg = 12 B
-# current buf: size = 8162 B / used = 1468 B / count = 115 / avg = 12 B
+# strcache buffers: 1 (0) / strings = 116 / storage = 1476 B / avg = 12 B
+# current buf: size = 8162 B / used = 1476 B / count = 116 / avg = 12 B
 
-# strcache performance: lookups = 136 / hit rate = 15%
+# strcache performance: lookups = 186 / hit rate = 37%
 # hash-table stats:
-# Load=115/8192=1%, Rehash=0, Collisions=4/136=3%
-# Finished Make data base on Thu Jul  7 13:47:59 2022
+# Load=116/8192=1%, Rehash=0, Collisions=5/186=3%
+# Finished Make data base on Sat Jul  9 11:57:33 2022
 
 # GNU Make 4.2.1
 # Built for x86_64-pc-linux-gnu
@@ -651,7 +679,7 @@ ft_putendl_fd.o:
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Thu Jul  7 13:47:59 2022
+# Make data base, printed on Sat Jul  9 11:57:33 2022
 
 # Variables
 
@@ -684,7 +712,7 @@ GDMSESSION = ubuntu
 # environment
 XMODIFIERS = @im=ibus
 # makefile
-CURDIR := /mnt/nfs/homes/akouoi/repo/push_swap
+CURDIR := /mnt/nfs/homes/akouoi/circle_2/push_swap
 # makefile
 SHELL = /bin/sh
 # environment
@@ -698,7 +726,7 @@ _ = /usr/bin/code
 # makefile (from 'Makefile', line 5)
 c = \033[0m"
 # environment
-JOURNAL_STREAM = 9:1927275
+JOURNAL_STREAM = 9:323944
 # environment
 XDG_CONFIG_DIRS = /etc/xdg/xdg-ubuntu:/etc/xdg
 # makefile (from 'Makefile', line 1)
@@ -718,15 +746,15 @@ DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/101966/bus
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-MANAGERPID = 433402
+MANAGERPID = 67880
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/101966/vscode-ipc-00249b44-88ff-45b2-8986-e8c79f75ea7d.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/101966/vscode-ipc-c365b2e8-187a-429e-9dd5-38fb5d3214c4.sock
 # environment
-VSCODE_CWD = /mnt/nfs/homes/akouoi/repo/push_swap
+VSCODE_CWD = /mnt/nfs/homes/akouoi/circle_2/push_swap
 # environment
-XDG_SESSION_PATH = /org/freedesktop/DisplayManager/Session6
+XDG_SESSION_PATH = /org/freedesktop/DisplayManager/Session1
 # environment
-KRB5CCNAME = FILE:/tmp/krb5cc_101966_pA1sNB
+KRB5CCNAME = FILE:/tmp/krb5cc_101966_GJSA0T
 # default
 MAKE_HOST := x86_64-pc-linux-gnu
 # environment
@@ -736,7 +764,7 @@ GPG_AGENT_INFO = /run/user/101966/gnupg/S.gpg-agent:0:1
 # environment
 LSCOLORS = Gxfxcxdxbxegedabagacad
 # environment
-SESSION_MANAGER = local/e1r3p14.clusters.42paris.fr:@/tmp/.ICE-unix/433929,unix/e1r3p14.clusters.42paris.fr:/tmp/.ICE-unix/433929
+SESSION_MANAGER = local/e1r3p14.clusters.42paris.fr:@/tmp/.ICE-unix/68421,unix/e1r3p14.clusters.42paris.fr:/tmp/.ICE-unix/68421
 # environment
 XDG_RUNTIME_DIR = /run/user/101966
 # environment
@@ -746,7 +774,7 @@ VSCODE_LOG_STACK = false
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-INVOCATION_ID = 1c1b44a1cdc844cda888ecdae9678586
+INVOCATION_ID = 3db3f16f03a947109daa8a3e8c76b589
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
@@ -766,11 +794,11 @@ DISPLAY = :0
 # environment
 VSCODE_PIPE_LOGGING = true
 # environment
-PWD = /mnt/nfs/homes/akouoi/repo/push_swap
+PWD = /mnt/nfs/homes/akouoi/circle_2/push_swap
 # default
 .LOADED := 
 # environment
-SSH_AGENT_PID = 433893
+SSH_AGENT_PID = 68384
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = ubuntu:GNOME
 # environment
@@ -822,9 +850,6 @@ MAKE_VERSION := 4.2.1
 # environment
 USER = akouoi
 # makefile
- 
-make: *** [Makefile:53: main.o] Error 2
-
 .DEFAULT_GOAL := all
 # environment
 XDG_CURRENT_DESKTOP = Unity
@@ -837,7 +862,7 @@ LESS = -R
 # default
 MAKE_COMMAND := make
 # environment
-OLDPWD = /mnt/nfs/homes/akouoi
+OLDPWD = /mnt/nfs/homes/akouoi/circle_2
 # default
 .VARIABLES := 
 # automatic
@@ -875,11 +900,12 @@ LC_ALL = C
 # environment
 GJS_DEBUG_TOPICS = JS ERROR;JS LOG
 # environment
-GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/e0c27149_fcef_4d8b_b8f5_21e021aa8ab3
+GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/ac7b46ef_e22a_43f8_877e_82b4d38d0652
+ 
 # automatic
 ^F = $(notdir $^)
 # environment
-GNOME_TERMINAL_SERVICE = :1.78
+GNOME_TERMINAL_SERVICE = :1.83
 # default
 SUFFIXES := 
 # environment
@@ -899,9 +925,9 @@ TERM = xterm-256color
 # environment
 DOCKER_HOST = unix:///run/user/101966/docker.sock
 # environment
-VSCODE_PID = 438331
+VSCODE_PID = 69604
 # variable set hash-table stats:
-# Load=121/1024=12%, Rehash=0, Collisions=19/157=12%
+# Load=121/1024=12%, Rehash=0, Collisions=20/159=13%
 
 # Pattern-specific Variable Values
 
@@ -909,9 +935,9 @@ VSCODE_PID = 438331
 
 # Directories
 
-# . (device 59, inode 20676613): 27 files, no impossibilities.
+# . (device 55, inode 20676613): 41 files, no impossibilities.
 
-# 27 files, no impossibilities in 1 directories.
+# 41 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -924,17 +950,39 @@ VSCODE_PID = 438331
 
 # Files
 
-# Not a target:
-sort_test.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
+sort_test.o: sort_test.c
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'sort_test'
+#  Last modified 2022-07-09 11:57:27.936431726
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 53):
+	$(MAKE) -s all -C libft
+	$(CC) $(CFLAG) -c $^
 
 # Not a target:
-move_r.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
+check_arg.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-01 11:27:06.482772631
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+init.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-07 14:19:51.232057694
+#  File has been updated.
+#  Successfully updated.
+
+move_r.o: move_r.c
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'move_r'
+#  Last modified 2022-07-09 11:57:27.588432174
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 53):
+	$(MAKE) -s all -C libft
+	$(CC) $(CFLAG) -c $^
 
 all: push_swap clean
 #  Phony target (prerequisite of .PHONY).
@@ -943,7 +991,7 @@ all: push_swap clean
 #  File does not exist.
 #  File has not been updated.
 # variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/7=0%
+# Load=0/32=0%, Rehash=0, Collisions=0/9=0%
 
 .PHONY: all build bonus clean fclean re
 #  Implicit rule search has not been done.
@@ -953,26 +1001,61 @@ all: push_swap clean
 # Not a target:
 main.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-06 15:08:23.28948644
+#  Last modified 2022-07-09 11:54:55.01364114
 #  File has been updated.
 #  Successfully updated.
 
 # Not a target:
-math_2.o:
+move_p.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-06 17:17:02.483866934
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+math.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-06 14:55:56.949423258
+#  File has been updated.
+#  Successfully updated.
+
+math_2.o: math_2.c
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'math_2'
+#  Last modified 2022-07-09 11:57:28.047431584
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 53):
+	$(MAKE) -s all -C libft
+	$(CC) $(CFLAG) -c $^
+
+# Not a target:
+.SUFFIXES:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
 
-# Not a target:
-print.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
+print.o: print.c
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'print'
+#  Last modified 2022-07-09 11:57:27.737431982
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 53):
+	$(MAKE) -s all -C libft
+	$(CC) $(CFLAG) -c $^
 
 # Not a target:
 Makefile:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-07 13:46:13.137304855
+#  Last modified 2022-07-09 11:57:24.496436147
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+sort_bubble.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-04 12:41:37.915990985
 #  File has been updated.
 #  Successfully updated.
 
@@ -982,11 +1065,29 @@ build:
 #  File does not exist.
 #  File has not been updated.
 
+sort_quick.o: sort_quick.c
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'sort_quick'
+#  Last modified 2022-07-09 11:57:27.822431873
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 53):
+	$(MAKE) -s all -C libft
+	$(CC) $(CFLAG) -c $^
+
 # Not a target:
-sort_quick.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
+sort_test.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-09 11:56:01.852544746
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+move_r.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-07 14:26:03.522649041
+#  File has been updated.
+#  Successfully updated.
 
 bonus:
 #  Phony target (prerequisite of .PHONY).
@@ -994,11 +1095,15 @@ bonus:
 #  File does not exist.
 #  File has not been updated.
 
-# Not a target:
-move_s.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
+move_s.o: move_s.c
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'move_s'
+#  Last modified 2022-07-09 11:57:27.688432045
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 53):
+	$(MAKE) -s all -C libft
+	$(CC) $(CFLAG) -c $^
 
 fclean: clean
 #  Phony target (prerequisite of .PHONY).
@@ -1009,11 +1114,15 @@ fclean: clean
 	rm -f $(NAME)
 	@echo $(cb)MAKE FCLEAN$(c)
 
-# Not a target:
-moves.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
+moves.o: moves.c
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'moves'
+#  Last modified 2022-07-09 11:57:27.539432236
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 53):
+	$(MAKE) -s all -C libft
+	$(CC) $(CFLAG) -c $^
 
 .SILENT:
 #  Implicit rule search has not been done.
@@ -1021,10 +1130,31 @@ moves.o:
 #  File has not been updated.
 
 # Not a target:
+math_2.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-05 18:55:01.961525186
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
+sort_two_three.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-07 10:03:18.771161596
+#  File has been updated.
+#  Successfully updated.
+
+# Not a target:
 .DEFAULT:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
+
+# Not a target:
+print.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-06 18:03:04.572702662
+#  File has been updated.
+#  Successfully updated.
 
 re: fclean all
 #  Phony target (prerequisite of .PHONY).
@@ -1035,124 +1165,170 @@ re: fclean all
 clean:
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
+#  Implicit/static pattern stem: ''
 #  File does not exist.
-#  File has not been updated.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# automatic
+# @ := clean
+# automatic
+# % := 
+# automatic
+# * := 
+# automatic
+# + := 
+# automatic
+# | := 
+# automatic
+# < := 
+# automatic
+# ^ := 
+# automatic
+# ? := 
+# variable set hash-table stats:
+ 
+# Load=8/32=25%, Rehash=0, Collisions=4/17=24%
 #  recipe to execute (from 'Makefile', line 56):
 	$(MAKE) -s fclean -C libft
 	rm -f $(OBJ)
 	@echo $(cb)MAKE CLEAN$(c)
 
 # Not a target:
-check_arg.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
+sort_quick.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-06-30 14:44:57.819266644
+#  File has been updated.
+#  Successfully updated.
+
+check_arg.o: check_arg.c
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'check_arg'
+#  Last modified 2022-07-09 11:57:27.430432376
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 53):
+	$(MAKE) -s all -C libft
+	$(CC) $(CFLAG) -c $^
 
 push_swap: main.o check_arg.o init.o moves.o move_r.o move_p.o move_s.o print.o sort_bubble.o sort_quick.o sort_two_three.o sort_test.o math.o math_2.o
 #  Implicit rule search has not been done.
-#  Last modified 2022-07-07 13:45:39.811342276
-#  File has not been updated.
-# variable set hash-table stats:
-# Load=0/32=0%, Rehash=0, Collisions=0/7=0%
+#  Last modified 2022-07-09 11:57:28.097431519
+#  File has been updated.
+#  Successfully updated.
 #  recipe to execute (from 'Makefile', line 27):
 	$(CC) $(OBJ) -L libft/. -lft -g -o $(NAME)
-	@echo $(cO)           __ __			$(c)
-	@echo $(cO)         ,;::\::\		$(c)
-	@echo $(cO)       ,^ / ^ /^/		$(c)
-	@echo $(cO)   _\,: ^.,-^.-^:.		$(c)
-	@echo $(cO)  -./^   :    :  :\,		$(c)
-	@echo $(cO)   ::.  ,:__o ;o_; :-	$(c)
-	@echo $(cO)   :   (  .^*^8*^, );	$(c)
-	@echo $(cO)    \..  - ^--^-^ /		$(c)
-	@echo $(cO)     -:._..-   _.^		$(c)
-	@echo $(cO)     ,;  .     -.		$(c)
-	@echo $(cO)    / ^| |       \		$(c)
-	@echo $(cO)   ::. J :        :		$(c)
-	@echo $(cO)   |   C  \       |		$(c)
-	@echo $(cO)   :. C_, :       ;		$(c)
-	@echo $(cO)    \^/^_/       /		$(c)
-	@echo $(cO)     -...   , _,^		$(c)
-	@echo $(cO)      |,|  : |		 	$(c)
-	@echo $(cO)      |-|  | |			$(c)
-	@echo $(cO)      |,|  | |			$(c)
-	@echo $(cO)  ,--.;-|  | ^..--.		$(c)
-	@echo $(cO) /;^  ^ ;  ^..--. JJ		$(c)
-	@echo $(cO) \:.___(___   ) JJ^		$(c)
+	# @echo $(cO)           __ __			$(c)
+	# @echo $(cO)         ,;::\::\		$(c)
+	# @echo $(cO)       ,^ / ^ /^/		$(c)
+	# @echo $(cO)   _\,: ^.,-^.-^:.		$(c)
+	# @echo $(cO)  -./^   :    :  :\,		$(c)
+	# @echo $(cO)   ::.  ,:__o ;o_; :-	$(c)
+	# @echo $(cO)   :   (  .^*^8*^, );	$(c)
+	# @echo $(cO)    \..  - ^--^-^ /		$(c)
+	# @echo $(cO)     -:._..-   _.^		$(c)
+	# @echo $(cO)     ,;  .     -.		$(c)
+	# @echo $(cO)    / ^| |       \		$(c)
+	# @echo $(cO)   ::. J :        :		$(c)
+	# @echo $(cO)   |   C  \       |		$(c)
+	# @echo $(cO)   :. C_, :       ;		$(c)
+	# @echo $(cO)    \^/^_/       /		$(c)
+	# @echo $(cO)     -...   , _,^		$(c)
+	# @echo $(cO)      |,|  : |		 	$(c)
+	# @echo $(cO)      |-|  | |			$(c)
+	# @echo $(cO)      |,|  | |			$(c)
+	# @echo $(cO)  ,--.;-|  | ^..--.		$(c)
+	# @echo $(cO) /;^  ^ ;  ^..--. JJ		$(c)
+	# @echo $(cO) \:.___(___   ) JJ^		$(c)
 	@echo $(cg)MAKE PUSH_SWAP OK		$(c)
 
-# Not a target:
-init.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
+init.o: init.c
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'init'
+#  Last modified 2022-07-09 11:57:27.483432308
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 53):
+	$(MAKE) -s all -C libft
+	$(CC) $(CFLAG) -c $^
 
 main.o: main.c
 #  Implicit rule search has been done.
 #  Implicit/static pattern stem: 'main'
-#  Last modified 2514-05-30 03:53:03.107374182
+#  Last modified 2022-07-09 11:57:27.374432448
 #  File has been updated.
-#  Failed to be updated.
-# automatic
-# @ := main.o
-# automatic
-# % := 
-# automatic
-# * := main
-# automatic
-# + := main.c
-# automatic
-# | := 
-# automatic
-# < := main.c
- 
-# automatic
-# ^ := main.c
-# automatic
-# ? := main.c
-# variable set hash-table stats:
-# Load=8/32=25%, Rehash=0, Collisions=4/16=25%
+#  Successfully updated.
 #  recipe to execute (from 'Makefile', line 53):
 	$(MAKE) -s all -C libft
 	$(CC) $(CFLAG) -c $^
 
 # Not a target:
-move_p.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
+move_s.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-05 18:55:46.829473268
+#  File has been updated.
+#  Successfully updated.
+
+move_p.o: move_p.c
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'move_p'
+#  Last modified 2022-07-09 11:57:27.639432108
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 53):
+	$(MAKE) -s all -C libft
+	$(CC) $(CFLAG) -c $^
+
+math.o: math.c
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'math'
+#  Last modified 2022-07-09 11:57:27.987431661
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 53):
+	$(MAKE) -s all -C libft
+	$(CC) $(CFLAG) -c $^
 
 # Not a target:
-math.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
+moves.c:
+#  Implicit rule search has been done.
+#  Last modified 2022-07-06 17:36:24.814542747
+#  File has been updated.
+#  Successfully updated.
 
-# Not a target:
-sort_two_three.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
+sort_two_three.o: sort_two_three.c
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'sort_two_three'
+#  Last modified 2022-07-09 11:57:27.878431801
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 53):
+	$(MAKE) -s all -C libft
+	$(CC) $(CFLAG) -c $^
 
-# Not a target:
-sort_bubble.o:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
+sort_bubble.o: sort_bubble.c
+#  Implicit rule search has been done.
+#  Implicit/static pattern stem: 'sort_bubble'
+#  Last modified 2022-07-09 11:57:27.780431927
+#  File has been updated.
+#  Successfully updated.
+#  recipe to execute (from 'Makefile', line 53):
+	$(MAKE) -s all -C libft
+	$(CC) $(CFLAG) -c $^
 
 # files hash-table stats:
-# Load=27/1024=3%, Rehash=0, Collisions=0/69=0%
+# Load=40/1024=4%, Rehash=0, Collisions=3/122=2%
 # VPATH Search Paths
 
 # No 'vpath' search paths.
 
 # No general ('VPATH' variable) search path.
 
-# strcache buffers: 1 (0) / strings = 56 / storage = 509 B / avg = 9 B
-# current buf: size = 8162 B / used = 509 B / count = 56 / avg = 9 B
+# strcache buffers: 1 (0) / strings = 69 / storage = 617 B / avg = 8 B
+# current buf: size = 8162 B / used = 617 B / count = 69 / avg = 8 B
 
-# strcache performance: lookups = 80 / hit rate = 30%
+# strcache performance: lookups = 134 / hit rate = 48%
 # hash-table stats:
-# Load=56/8192=1%, Rehash=0, Collisions=1/80=1%
-# Finished Make data base on Thu Jul  7 13:47:59 2022
+# Load=69/8192=1%, Rehash=0, Collisions=1/134=1%
+# Finished Make data base on Sat Jul  9 11:57:33 2022
 
  
