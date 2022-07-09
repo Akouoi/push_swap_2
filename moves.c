@@ -6,7 +6,7 @@
 /*   By: akouoi <akouoi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/22 15:15:22 by akouoi            #+#    #+#             */
-/*   Updated: 2022/07/09 12:12:24 by akouoi           ###   ########.fr       */
+/*   Updated: 2022/07/09 14:52:03 by akouoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int	move_single(t_list **lst, int i, t_stats stats)
 
 int	move(t_list **a, t_list **b, int i, t_stats stats)
 {
-	void	(*d_move[6])(t_list**, t_list**, int, t_stats);
+	void	(*d_move[7])(t_list**, t_list**, int, t_stats);
 
 	if (!(stats.size))
 		return (0);
