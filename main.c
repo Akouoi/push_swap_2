@@ -6,7 +6,7 @@
 /*   By: akouoi <akouoi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/17 11:27:29 by akouoi            #+#    #+#             */
-/*   Updated: 2022/07/09 19:14:48 by akouoi           ###   ########.fr       */
+/*   Updated: 2022/07/10 10:44:45 by akouoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@ int	pushswap(int ac, char **av)
 	t_list	**a;
 	t_list	**b;
 	t_stats	stats;
-
 //	int		i = 0;
 	a = ft_lstset(ac, av);
 	// printf(" first %d\n", (*a)->nb);
@@ -33,10 +32,11 @@ int	pushswap(int ac, char **av)
 	b = malloc(sizeof(t_list **));
 	if (!b)
 		return (1);
-							print_tab("LISTE", a, b, stats);
+							// print_tab("LISTE", a, b, stats);
+	// sort_test(a, b, stats);
 	sort_test(a, b, stats);
 
-							print_tab("LISTE", a, b, stats);
+							// print_tab("LISTE", a, b, stats);
 	ft_lstclear(a, free);
 	ft_lstclear(b, free);
 	// printf("GG liste triee\n");

@@ -6,7 +6,7 @@
 /*   By: akouoi <akouoi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/22 15:15:22 by akouoi            #+#    #+#             */
-/*   Updated: 2022/07/09 19:17:04 by akouoi           ###   ########.fr       */
+/*   Updated: 2022/07/10 10:49:02 by akouoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 int	move_single(t_list **lst, int i, t_stats stats)
 {
 	void	(*move[rrr + 1])(t_list**, int);
-
 	if (!(stats.size))
 		return (0);
 	move[sa] = ft_swap;
@@ -34,8 +33,8 @@ int	move_single(t_list **lst, int i, t_stats stats)
 int	move(t_list **a, t_list **b, int i, t_stats stats)
 {
 	void	(*d_move[7])(t_list**, t_list**, int, t_stats);
-										printf("%d :", stats.mov);
-										stats.mov += 1;
+										// mov+=1;
+										// printf("\tmove %d\n",mov);
 	if (!(stats.size))
 		return (0);
 	d_move[ss - 6] = move_ss;

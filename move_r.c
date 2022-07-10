@@ -6,7 +6,7 @@
 /*   By: akouoi <akouoi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/17 11:20:59 by akouoi            #+#    #+#             */
-/*   Updated: 2022/07/09 15:17:50 by akouoi           ###   ########.fr       */
+/*   Updated: 2022/07/10 10:45:40 by akouoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,9 @@ void	ft_rotate(t_list **lst, int i)
 	ft_lstdelone(tmp, free);
 	(ft_lstlast(*lst))->rk = rk;
 	if (i == ra)
-		printf("ra\n");
+		ft_printf("ra\n");
 	if (i == rb)
-		printf("rb\n");
+		ft_printf("rb\n");
 }
 
 void	ft_rrotate(t_list **lst, int i)
@@ -47,9 +47,9 @@ void	ft_rrotate(t_list **lst, int i)
 	tmp->nx = NULL;
 	(*lst)->rk = rk;
 	if (i == rra)
-		printf("rra\n");
+		ft_printf("rra\n");
 	if (i == rrb)
-		printf("rrb\n");
+		ft_printf("rrb\n");
 }
 
 void	move_double_r(t_list **a, t_list **b, int i, t_stats stats)
@@ -58,12 +58,12 @@ void	move_double_r(t_list **a, t_list **b, int i, t_stats stats)
 	{
 		stats.stdsum_a = move_single(a, rr, stats);
 		stats.stdsum_b = move_single(b, rr, stats);
-		printf("rr\n");
+		ft_printf("rr\n");
 	}
 	if (i == rrr)
 	{
 		stats.stdsum_a = move_single(a, rrr, stats);
 		stats.stdsum_b = move_single(b, rrr, stats);
-		printf("rrr\n");
+		ft_printf("rrr\n");
 	}
 }
