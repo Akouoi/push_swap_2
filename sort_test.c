@@ -6,7 +6,7 @@
 /*   By: akouoi <akouoi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/30 12:38:22 by akouoi            #+#    #+#             */
-/*   Updated: 2022/07/10 10:50:58 by akouoi           ###   ########.fr       */
+/*   Updated: 2022/07/10 12:34:13 by akouoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,19 +47,19 @@ int	solve_sort(t_list **a, t_list **b, t_stats stats)
 		if (tmp)
 			min = ft_min(min, tmp);
 	}
-	if (!min->cost_a && !min->cost_b)
-		stats.stdsum_a = move(a, b, pa, stats);
 										// print_tab("LISTE solve_sort", a, b, stats);
-	if (min->cost_a * min->cost_b > 0)
+	if (min->cost_a == 0 && min->cost_b == 0)
+		stats.stdsum_a = move(a, b, pa, stats);
+	else if (min->cost_a * min->cost_b > 0)
 		stats.stdsum_a = move(a, b, rr + (min->cost_a < 0), stats);
 	else if (min->cost_a * min->cost_b < 0)
 	{
 		stats.stdsum_a = move(a, b, ra + (min->cost_a < 0), stats);
 		stats.stdsum_a = move(a, b, rb + (min->cost_b < 0), stats);
 	}
-	else if (!min->cost_a && min->cost_b)
+	else if (min->cost_a != 0 && min->cost_b == 0)
 		stats.stdsum_a = move(a, b, ra + (min->cost_a < 0), stats);
-	else if (!min->cost_b && min->cost_a)
+	else if (min->cost_b != 0 && min->cost_a == 0)
 		stats.stdsum_a = move(a, b, rb + (min->cost_b < 0), stats);
 	// }
 										// print_tab("LISTE solve_sort", a, b, stats);
@@ -71,25 +71,27 @@ int sort_test(t_list **a, t_list **b, t_stats stats)
 {
 	int m;
 
-	// stats.stdsum_a = ft_stdsum(a, stats);
+	if(stats.stdsum_a == 0)
+		return(0);
 	m = 0;
-	if (ft_lstsize(*a) < 3)
-		return (0);
-	// if (stats.move - (int)stats.size % 10 >= 3)
+	if (ft_lstsize(*a) < 6)
+		stats.move = 3;
 	else
 		stats.move -= ft_lstsize(*a) / 3;
-										// printf("size = %.0f\t move %.0f\n", stats.size, stats.move);
+										printf("size = %.0f\t move %.0f\n", stats.size, stats.move);
 	while (ft_lstsize(*a) > (int)stats.move)
 	{
-		if ((*a)->rk < (int)(stats.size - stats.move) + 1)
+		if ((*a)->rk < (stats.size - stats.move) + 1)
 			stats.stdsum_a = move(a, b, pb, stats);
 		else
 		{
-			if (find_nx(a, ++m, stats) < (int)(stats.size - stats.move) / 2)
-				stats.stdsum_a = move(a, b, ra, stats);
-			else
+			if (find_nx(a, ++m, stats) > (int)(stats.size - stats.move) / 2 + 1)
 				stats.stdsum_a = move(a, b, rra, stats);
+			else
+				stats.stdsum_a = move(a, b, ra, stats);
 		}
+		if ((*a)->rk < (stats.size - stats.move))
+			stats.stdsum_a = move(a, b, pb, stats);
 	}
 										print_tab("LISTE push", a, b, stats);
 										// printf("serie = %d\n", stats.serie);
@@ -108,13 +110,17 @@ int sort_test(t_list **a, t_list **b, t_stats stats)
 	// }
 										// printf("\nsort tested\n");
 	// if (ft_lstsize(*a) == stats.mid)
-	// if (ft_lstsize(*a) == 3)
-	// {
+	if (ft_lstsize(*a) == 3)
+	{
+		sort_three(a, stats);
+		get_cost_b(*a, *b, stats);
+										print_tab("LISTE push", a, b, stats);
+		solve_sort(a, b, stats);
+	}
 	// 									printf("---\nsort test\n");
-	solve_sort(a, b, stats);
 	// }
 										// print_tab("LISTE after push", a, b, stats);	
 	// if (a && b)
-		sort_test(a, b, stats);
+		// sort_test(a, b, stats);
 	return(1);
 }

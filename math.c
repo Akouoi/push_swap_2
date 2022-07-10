@@ -6,7 +6,7 @@
 /*   By: akouoi <akouoi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/22 19:04:06 by akouoi            #+#    #+#             */
-/*   Updated: 2022/07/09 15:29:52 by akouoi           ###   ########.fr       */
+/*   Updated: 2022/07/10 12:32:06 by akouoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ int	get_cost_b(t_list *a, t_list *b, t_stats stats)
 	while (tmp)
 	{
 		if (tmp->pos  <= (double) ft_lstsize(b) / 2 + 1)
-			tmp->cost_b = tmp->pos;
+			tmp->cost_b = tmp->pos - 1;
 		else
 			tmp->cost_b = -(ft_lstsize(b) - tmp->pos + 1);
 		next = find_nx(&a, tmp->rk, stats) - 1;
