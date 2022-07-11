@@ -6,7 +6,7 @@
 /*   By: akouoi <akouoi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/17 11:27:29 by akouoi            #+#    #+#             */
-/*   Updated: 2022/07/10 12:27:00 by akouoi           ###   ########.fr       */
+/*   Updated: 2022/07/11 11:02:45 by akouoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,14 +25,12 @@ int	pushswap(int ac, char **av)
 	stats = ft_statset(a);
 	if (check_dup(a) == 1)
 		return (write(2, "Error\n", 6));
-	if (ac == 3)
-		return (sort_two(*a, stats));
-	if (ac == 4)
-		return (sort_three(a, stats));
 	b = malloc(sizeof(t_list **));
 	if (!b)
 		return (1);
-							print_tab("LISTE", a, b, stats);
+	if (ac <= 5)
+		return(sort_little(a, b, stats, ac));
+							//print_tab("LISTE", a, b, stats);
 	sort_test(a, b, stats);
 							// print_tab("LISTE", a, b, stats);
 	ft_lstclear(a, free);

@@ -6,7 +6,7 @@
 /*   By: akouoi <akouoi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/17 11:22:40 by akouoi            #+#    #+#             */
-/*   Updated: 2022/07/10 10:44:28 by akouoi           ###   ########.fr       */
+/*   Updated: 2022/07/11 11:03:33 by akouoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -148,6 +148,9 @@ int		sort_three(t_list **lst, t_stats stats);
 
 int		sort_two(t_list *lst, t_stats stats);
 
+int		sort_five(t_list **a, t_list **b, t_stats stats);
+
+int		sort_little(t_list **a, t_list **b, t_stats stats, int k);
 
 //---------------------------------------------------------------------------------------
 //		bubble_sort.c
@@ -162,6 +165,8 @@ int		bubble_sort(t_list *a, t_list *b, t_stats stats);
 int		quick_sort(t_list **a, t_list **b, t_stats stats);
 
 int		sort_test(t_list **a, t_list **b, t_stats stats);
+
+int		solve_sort(t_list **a, t_list **b, t_stats stats);
 
 #endif
 
