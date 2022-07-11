@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sort_two_three.c                                   :+:      :+:    :+:   */
+/*   sort_little.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akouoi <akouoi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/22 19:12:33 by akouoi            #+#    #+#             */
-/*   Updated: 2022/07/11 11:03:47 by akouoi           ###   ########.fr       */
+/*   Updated: 2022/07/11 13:52:32 by akouoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,11 +49,7 @@ int	sort_two(t_list *lst, t_stats stats)
 int	sort_three(t_list **lst, t_stats stats)
 {
 	if (ft_serie(lst) == 2)
-	// {
-	// 	if (ft_stdsum(lst, stats) == 0)
-	// 		ft_lstclear(lst, free);
 		return (0);
-	// }
 	if ((*lst)->se > 0 && (*lst)->nx->se > 0)
 	{
 		stats.stdsum_a = move_single(lst, ra, stats);
@@ -75,20 +71,18 @@ int	sort_three(t_list **lst, t_stats stats)
 	return (1);
 }
 
-int sort_five(t_list **a, t_list **b, t_stats stats)
+int	sort_five(t_list **a, t_list **b, t_stats stats)
 {
-
-	if(stats.stdsum_a == 0)
-		return(0);
+	if (stats.stdsum_a == 0)
+		return (0);
 	while (ft_lstsize(*a) > 3)
-			stats.stdsum_a = move(a, b, pb, stats);								// print_tab("LISTE push", a, b, stats);
-
+			stats.stdsum_a = move(a, b, pb, stats);
 	if (ft_lstsize(*a) == 3)
 	{
 		sort_three(a, stats);
 		get_cost_b(*a, *b, stats);
-//										print_tab("LISTE push", a, b, stats);
 		solve_sort(a, b, stats);
 	}
-	return(1);
+	ft_lstclear(b, free);
+	return (1);
 }

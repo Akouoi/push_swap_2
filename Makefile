@@ -15,7 +15,7 @@ SRC = main.c \
 	print.c \
 	sort_bubble.c \
 	sort_quick.c \
-	sort_two_three.c \
+	sort_little.c \
 	sort_test.c \
 	math.c \
 	math_2.c

@@ -6,7 +6,7 @@
 /*   By: akouoi <akouoi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/25 14:11:48 by akouoi            #+#    #+#             */
-/*   Updated: 2022/05/17 20:58:41 by akouoi           ###   ########.fr       */
+/*   Updated: 2022/07/11 14:22:25 by akouoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,7 @@ char	*ft_itoa(int n)
 	else
 		n_len = ft_nblen(sign * n) + (sign < 0);
 	n *= sign;
-	str = ft_calloc(n_len + 1, sizeof(char));
+	str = malloc((n_len + 1) * sizeof(char));
 	if (n == -2147483648 || n == 0)
 		return (ft_limit(n, str));
 	*(str + n_len) = '\0';

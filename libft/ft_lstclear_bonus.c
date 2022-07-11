@@ -6,7 +6,7 @@
 /*   By: akouoi <akouoi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/06 13:32:51 by akouoi            #+#    #+#             */
-/*   Updated: 2022/05/16 12:04:10 by akouoi           ###   ########.fr       */
+/*   Updated: 2022/07/11 14:23:26 by akouoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
 	t_list	*tmp;
 
-	tmp = *lst;
 	if (lst)
 	{
+		tmp = *lst;
 		while (tmp)
 		{
 			tmp = (*lst)->nx;
@@ -26,5 +26,6 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 			free(*lst);
 			*lst = tmp;
 		}
+		// free(lst);
 	}
 }

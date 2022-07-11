@@ -6,7 +6,7 @@
 /*   By: akouoi <akouoi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/17 11:27:29 by akouoi            #+#    #+#             */
-/*   Updated: 2022/07/11 11:02:45 by akouoi           ###   ########.fr       */
+/*   Updated: 2022/07/11 14:18:24 by akouoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,13 +28,18 @@ int	pushswap(int ac, char **av)
 	b = malloc(sizeof(t_list **));
 	if (!b)
 		return (1);
-	if (ac <= 5)
-		return(sort_little(a, b, stats, ac));
-							//print_tab("LISTE", a, b, stats);
-	sort_test(a, b, stats);
+							// printf("%d\n", ac);
+	stats.stdsum_a = move(a, b, pb, stats);
+	// if (ac <= 6)
+	// 	return(sort_little(a, b, stats, ac));
+	// else
+	// 	sort_test(a, b, stats);
 							// print_tab("LISTE", a, b, stats);
+							//print_tab("LISTE", a, b, stats);
 	ft_lstclear(a, free);
-	ft_lstclear(b, free);
+	if(*b)
+		ft_lstclear(b, free);
+	
 	// printf("GG liste triee\n");
 	return (1);
 }

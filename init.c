@@ -6,7 +6,7 @@
 /*   By: akouoi <akouoi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/17 11:19:07 by akouoi            #+#    #+#             */
-/*   Updated: 2022/07/10 10:18:13 by akouoi           ###   ########.fr       */
+/*   Updated: 2022/07/11 14:20:13 by akouoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,7 @@ void	ft_lstadd_num(t_list **lst, int new)
 
 	newlst = malloc(sizeof(t_list));
 	newlst->nb = new;
+	newlst->content = ft_itoa(new);
 	newlst->nx = NULL;
 	if (*lst && newlst)
 	{
@@ -55,9 +56,7 @@ void	ft_lstadd_num(t_list **lst, int new)
 		tmp->nx = newlst;
 	}
 	else
-	{
 		*lst = newlst;
-	}
 }
 
 t_list	**ft_lstset(int ac, char **av)
