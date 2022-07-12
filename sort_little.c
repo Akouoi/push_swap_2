@@ -6,7 +6,7 @@
 /*   By: akouoi <akouoi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/22 19:12:33 by akouoi            #+#    #+#             */
-/*   Updated: 2022/07/11 13:52:32 by akouoi           ###   ########.fr       */
+/*   Updated: 2022/07/12 09:49:08 by akouoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,14 @@
 
 int	sort_little(t_list **a, t_list **b, t_stats stats, int k)
 {
-	if (k == 2)
-		return (sort_two(*a, stats));
 	if (k == 3)
+		return (sort_two(*a, stats));
+	if (k == 4)
 		return (sort_three(a, stats));
-	if (k > 3)
+	if (k > 4)
 		return (sort_five(a, b, stats));
-	ft_lstclear(a, free);
-	ft_lstclear(b, free);
+	// ft_lstclear(a, free);
+	// ft_lstclear(b, free);
 	return (0);
 }
 
@@ -32,10 +32,10 @@ int	sort_two(t_list *lst, t_stats stats)
 		if (lst->nb > (lst->nx)->nb)
 		{
 			stats.stdsum_a = move_single(&lst, sa, stats);
-			ft_lstclear(&lst, free);
+			// ft_lstclear(&lst, free);
 			return (1);
 		}
-		ft_lstclear(&lst, free);
+		// ft_lstclear(&lst, free);
 		return (0);
 	}
 	else if (lst->rk == 1 && lst->nx->rk == stats.size)
@@ -54,8 +54,6 @@ int	sort_three(t_list **lst, t_stats stats)
 	{
 		stats.stdsum_a = move_single(lst, ra, stats);
 		stats.stdsum_a = move_single(lst, sa, stats);
-		if (ft_lstsize(*lst) == stats.size)
-			ft_lstclear(lst, free);
 		return (0);
 	}
 	if ((*lst)->se < 0 && (*lst)->rk > (*lst)->nx->nx->rk)

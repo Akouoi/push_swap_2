@@ -8,7 +8,7 @@ make[1]: *** No rule to make target 'ft_atoi.o', needed by 'libft.a'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Mon Jul 11 13:47:11 2022
+# Make data base, printed on Tue Jul 12 09:38:15 2022
 
 # Variables
 
@@ -45,15 +45,13 @@ CURDIR := /mnt/nfs/homes/akouoi/2nd_ring/push_swap/libft
 # makefile
 SHELL = /bin/sh
 # environment
-GDM_LANG = en
-# environment
 VTE_VERSION = 6003
 # environment
 VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
 # environment
 _ = /usr/bin/code
 # environment
-JOURNAL_STREAM = 9:661551
+JOURNAL_STREAM = 9:1429302
 # environment
 XDG_CONFIG_DIRS = /etc/xdg/xdg-ubuntu:/etc/xdg
 # makefile (from 'Makefile', line 1)
@@ -73,15 +71,15 @@ DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/101966/bus
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-MANAGERPID = 178512
+MANAGERPID = 374340
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/101966/vscode-ipc-e47d537b-a775-49c0-aabf-b21910ab6a58.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/101966/vscode-ipc-9e7acee5-b6ab-4005-8698-5ee3aab83f84.sock
 # environment
 VSCODE_CWD = /mnt/nfs/homes/akouoi/2nd_ring/push_swap
 # environment
-XDG_SESSION_PATH = /org/freedesktop/DisplayManager/Session2
+XDG_SESSION_PATH = /org/freedesktop/DisplayManager/Session7
 # environment
-KRB5CCNAME = FILE:/tmp/krb5cc_101966_YRKYrZ
+KRB5CCNAME = FILE:/tmp/krb5cc_101966_vHeuKb
 # default
 MAKE_HOST := x86_64-pc-linux-gnu
 # environment
@@ -91,7 +89,7 @@ GPG_AGENT_INFO = /run/user/101966/gnupg/S.gpg-agent:0:1
 # environment
 LSCOLORS = Gxfxcxdxbxegedabagacad
 # environment
-SESSION_MANAGER = local/e1r9p7.clusters.42paris.fr:@/tmp/.ICE-unix/179046,unix/e1r9p7.clusters.42paris.fr:/tmp/.ICE-unix/179046
+SESSION_MANAGER = local/e1r7p1.42.fr:@/tmp/.ICE-unix/374852,unix/e1r7p1.42.fr:/tmp/.ICE-unix/374852
 # environment
 XDG_RUNTIME_DIR = /run/user/101966
 # environment
@@ -103,7 +101,7 @@ VSCODE_LOG_STACK = false
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-INVOCATION_ID = e0e704b2a626418ba6e9a3d39c4bcc11
+INVOCATION_ID = 04385f896a964847835ea546fbe44010
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
@@ -125,7 +123,7 @@ PWD = /mnt/nfs/homes/akouoi/2nd_ring/push_swap
 # default
 .LOADED := 
 # environment
-SSH_AGENT_PID = 179010
+SSH_AGENT_PID = 374816
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = ubuntu:GNOME
 # environment
@@ -183,13 +181,11 @@ LESS = -R
 # default
 MAKE_COMMAND := make
 # environment
-OLDPWD = /mnt/nfs/homes/akouoi
+OLDPWD = /mnt/nfs/homes/akouoi/2nd_ring
 # default
 .VARIABLES := 
 # automatic
 *F = $(notdir $*)
-# environment
-LANGUAGE = en
 # environment
 XDG_SEAT_PATH = /org/freedesktop/DisplayManager/Seat0
 # environment
@@ -221,11 +217,11 @@ ELECTRON_NO_ATTACH_CONSOLE = 1
 # environment
 GJS_DEBUG_TOPICS = JS ERROR;JS LOG
 # environment
-GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/24518ce0_8ce9_4461_8430_b7f5d91f70a6
+GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/5b255f2c_8f47_48fe_af9c_63ef03187dc9
 # automatic
 ^F = $(notdir $^)
 # environment
-GNOME_TERMINAL_SERVICE = :1.76
+GNOME_TERMINAL_SERVICE = :1.88
 # default
 SUFFIXES := 
 # environment
@@ -245,9 +241,9 @@ TERM = xterm-256color
 # environment
 DOCKER_HOST = unix:///run/user/101966/docker.sock
 # environment
-VSCODE_PID = 181039
+VSCODE_PID = 376265
 # variable set hash-table stats:
-# Load=117/1024=11%, Rehash=0, Collisions=17/149=11%
+# Load=115/1024=11%, Rehash=0, Collisions=17/147=12%
 
 # Pattern-specific Variable Values
 
@@ -255,7 +251,7 @@ VSCODE_PID = 181039
 
 # Directories
 
-# . (device 59, inode 32770916): 54 files, no impossibilities.
+# . (device 58, inode 32770916): 54 files, no impossibilities.
 
 # 54 files, no impossibilities in 1 directories.
 
@@ -586,7 +582,6 @@ ft_putstr_fd.o:
 #  File has not been updated.
 
 # Not a target:
- 
 ft_lstlast_bonus.o:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
@@ -594,6 +589,7 @@ ft_lstlast_bonus.o:
 
 # Not a target:
 ft_putchar_fd.o:
+ 
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
@@ -642,7 +638,7 @@ ft_putendl_fd.o:
 # strcache performance: lookups = 137 / hit rate = 15%
 # hash-table stats:
 # Load=116/8192=1%, Rehash=0, Collisions=4/137=3%
-# Finished Make data base on Mon Jul 11 13:47:11 2022
+# Finished Make data base on Tue Jul 12 09:38:15 2022
 
 # GNU Make 4.2.1
 # Built for x86_64-pc-linux-gnu
@@ -651,7 +647,7 @@ ft_putendl_fd.o:
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Mon Jul 11 13:47:11 2022
+# Make data base, printed on Tue Jul 12 09:38:15 2022
 
 # Variables
 
@@ -687,8 +683,8 @@ XMODIFIERS = @im=ibus
 CURDIR := /mnt/nfs/homes/akouoi/2nd_ring/push_swap
 # makefile
 SHELL = /bin/sh
-# environment
-GDM_LANG = en
+# makefile (from 'Makefile', line 4)
+cO = "\033[1;33m
 # environment
 VTE_VERSION = 6003
 # environment
@@ -698,7 +694,7 @@ _ = /usr/bin/code
 # makefile (from 'Makefile', line 5)
 c = \033[0m"
 # environment
-JOURNAL_STREAM = 9:661551
+JOURNAL_STREAM = 9:1429302
 # environment
 XDG_CONFIG_DIRS = /etc/xdg/xdg-ubuntu:/etc/xdg
 # makefile (from 'Makefile', line 1)
@@ -718,15 +714,15 @@ DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/101966/bus
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-MANAGERPID = 178512
+MANAGERPID = 374340
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/101966/vscode-ipc-e47d537b-a775-49c0-aabf-b21910ab6a58.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/101966/vscode-ipc-9e7acee5-b6ab-4005-8698-5ee3aab83f84.sock
 # environment
 VSCODE_CWD = /mnt/nfs/homes/akouoi/2nd_ring/push_swap
 # environment
-XDG_SESSION_PATH = /org/freedesktop/DisplayManager/Session2
+XDG_SESSION_PATH = /org/freedesktop/DisplayManager/Session7
 # environment
-KRB5CCNAME = FILE:/tmp/krb5cc_101966_YRKYrZ
+KRB5CCNAME = FILE:/tmp/krb5cc_101966_vHeuKb
 # default
 MAKE_HOST := x86_64-pc-linux-gnu
 # environment
@@ -736,7 +732,7 @@ GPG_AGENT_INFO = /run/user/101966/gnupg/S.gpg-agent:0:1
 # environment
 LSCOLORS = Gxfxcxdxbxegedabagacad
 # environment
-SESSION_MANAGER = local/e1r9p7.clusters.42paris.fr:@/tmp/.ICE-unix/179046,unix/e1r9p7.clusters.42paris.fr:/tmp/.ICE-unix/179046
+SESSION_MANAGER = local/e1r7p1.42.fr:@/tmp/.ICE-unix/374852,unix/e1r7p1.42.fr:/tmp/.ICE-unix/374852
 # environment
 XDG_RUNTIME_DIR = /run/user/101966
 # environment
@@ -746,7 +742,7 @@ VSCODE_LOG_STACK = false
 # environment
 ELECTRON_RUN_AS_NODE = 1
 # environment
-INVOCATION_ID = e0e704b2a626418ba6e9a3d39c4bcc11
+INVOCATION_ID = 04385f896a964847835ea546fbe44010
 # default
 .FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell archives jobserver output-sync check-symlink load
 # environment
@@ -770,7 +766,7 @@ PWD = /mnt/nfs/homes/akouoi/2nd_ring/push_swap
 # default
 .LOADED := 
 # environment
-SSH_AGENT_PID = 179010
+SSH_AGENT_PID = 374816
 # environment
 ORIGINAL_XDG_CURRENT_DESKTOP = ubuntu:GNOME
 # environment
@@ -784,6 +780,9 @@ cg = "\033[0;32m
 # makefile (from 'Makefile', line 3)
 cb = "\033[0;36m
 # environment
+ 
+make: *** [Makefile:53: main.o] Error 2
+
 VSCODE_CLI = 1
 # environment
 VSCODE_CODE_CACHE_PATH = /mnt/nfs/homes/akouoi/.config/Code/CachedData/30d9c6cd9483b2cc586687151bcbcd635f373630
@@ -793,8 +792,6 @@ LOGNAME = akouoi
 APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
 # environment
 ZSH = /mnt/nfs/homes/akouoi/.oh-my-zsh
-# makefile (from 'Makefile', line 4)
-cO = "\033[1;33m
 # makefile (from 'Makefile', line 7)
 CFLAG = -Wall -Werror -Wextra
 # environment
@@ -834,13 +831,11 @@ LESS = -R
 # default
 MAKE_COMMAND := make
 # environment
-OLDPWD = /mnt/nfs/homes/akouoi
+OLDPWD = /mnt/nfs/homes/akouoi/2nd_ring
 # default
 .VARIABLES := 
 # automatic
 *F = $(notdir $*)
-# environment
-LANGUAGE = en
 # environment
 XDG_SEAT_PATH = /org/freedesktop/DisplayManager/Seat0
 # environment
@@ -872,11 +867,11 @@ LC_ALL = C
 # environment
 GJS_DEBUG_TOPICS = JS ERROR;JS LOG
 # environment
-GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/24518ce0_8ce9_4461_8430_b7f5d91f70a6
+GNOME_TERMINAL_SCREEN = /org/gnome/Terminal/screen/5b255f2c_8f47_48fe_af9c_63ef03187dc9
 # automatic
 ^F = $(notdir $^)
 # environment
-GNOME_TERMINAL_SERVICE = :1.76
+GNOME_TERMINAL_SERVICE = :1.88
 # default
 SUFFIXES := 
 # environment
@@ -896,20 +891,17 @@ TERM = xterm-256color
 # environment
 DOCKER_HOST = unix:///run/user/101966/docker.sock
 # environment
-VSCODE_PID = 181039
+VSCODE_PID = 376265
 # variable set hash-table stats:
-# Load=121/1024=12%, Rehash=0, Collisions=19/157=12%
+# Load=119/1024=12%, Rehash=0, Collisions=18/155=12%
 
 # Pattern-specific Variable Values
 
 # No pattern-specific variable values.
 
 # Directories
- 
-make: *** [Makefile:53: main.o] Error 2
 
-
-# . (device 59, inode 20676613): 27 files, no impossibilities.
+# . (device 58, inode 20676613): 27 files, no impossibilities.
 
 # 27 files, no impossibilities in 1 directories.
 
@@ -959,7 +951,7 @@ sort_little.o:
 # Not a target:
 main.c:
 #  Implicit rule search has been done.
-#  Last modified 2022-07-11 11:02:45.471922578
+#  Last modified 2022-07-11 14:18:24.046931434
 #  File has been updated.
 #  Successfully updated.
 
@@ -1056,7 +1048,7 @@ check_arg.o:
 
 push_swap: main.o check_arg.o init.o moves.o move_r.o move_p.o move_s.o print.o sort_bubble.o sort_quick.o sort_little.o sort_test.o math.o math_2.o
 #  Implicit rule search has not been done.
-#  Last modified 2022-07-11 11:03:48.997866289
+#  Last modified 2022-07-11 14:22:28.172556809
 #  File has not been updated.
 # variable set hash-table stats:
 # Load=0/32=0%, Rehash=0, Collisions=0/7=0%
@@ -1088,6 +1080,7 @@ push_swap: main.o check_arg.o init.o moves.o move_r.o move_p.o move_s.o print.o 
 
 # Not a target:
 init.o:
+ 
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
@@ -1152,6 +1145,6 @@ sort_bubble.o:
 # strcache performance: lookups = 79 / hit rate = 29%
 # hash-table stats:
 # Load=56/8192=1%, Rehash=0, Collisions=1/79=1%
-# Finished Make data base on Mon Jul 11 13:47:11 2022
+# Finished Make data base on Tue Jul 12 09:38:15 2022
 
  

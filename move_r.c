@@ -6,7 +6,7 @@
 /*   By: akouoi <akouoi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/17 11:20:59 by akouoi            #+#    #+#             */
-/*   Updated: 2022/07/10 10:45:40 by akouoi           ###   ########.fr       */
+/*   Updated: 2022/07/12 09:56:50 by akouoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ void	ft_rotate(t_list **lst, int i)
 	ft_lstadd_back(lst, ft_lstnew((*lst)->content));
 	(*lst) = tmp->nx;
 	ft_lstdelone(tmp, free);
+	tmp = NULL;
 	(ft_lstlast(*lst))->rk = rk;
 	if (i == ra)
 		ft_printf("ra\n");
@@ -44,7 +45,6 @@ void	ft_rrotate(t_list **lst, int i)
 	rk = ((tmp->nx)->rk);
 	ft_lstadd_front(lst, ft_lstnew((tmp->nx)->content));
 	ft_lstdelone(tmp->nx, free);
-	tmp->nx = NULL;
 	(*lst)->rk = rk;
 	if (i == rra)
 		ft_printf("rra\n");
