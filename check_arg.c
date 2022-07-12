@@ -6,7 +6,7 @@
 /*   By: akouoi <akouoi@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/17 11:17:37 by akouoi            #+#    #+#             */
-/*   Updated: 2022/07/01 11:27:06 by akouoi           ###   ########.fr       */
+/*   Updated: 2022/07/12 22:41:06 by akouoi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	check_atoi(const char *str)
 {
 	int			sign;
 	int			i;
-	long int	result;
+	long long int	result;
 
 	i = 0;
 	result = 0;
